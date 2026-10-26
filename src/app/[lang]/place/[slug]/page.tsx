@@ -123,7 +123,7 @@ export default async function PlacePage({ params }: PageProps<"/[lang]/place/[sl
               )}
             </div>
           ) : (
-            <div className="relative aspect-[16/9] max-h-[420px] w-full overflow-hidden md:rounded-2xl">
+            <div className="relative h-56 w-full overflow-hidden md:h-72 md:rounded-2xl">
               <CoverArt seed={place.slug} category={place.category} initial={place.nameEn || place.nameAr} className="absolute inset-0 size-full" />
               <span className="absolute bottom-3 start-3 rounded-full bg-ink-950/50 px-3 py-1 text-xs text-white backdrop-blur">{t.place.noPhotos}</span>
             </div>

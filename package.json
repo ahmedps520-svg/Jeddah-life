@@ -13,7 +13,8 @@
     "seed": "tsx scripts/seed.ts",
     "setup": "tsx scripts/seed.ts",
     "images": "tsx scripts/prepare-images.ts",
-    "icons": "tsx scripts/make-icons.ts"
+    "icons": "tsx scripts/make-icons.ts",
+    "postinstall": "node scripts/copy-vendor.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",

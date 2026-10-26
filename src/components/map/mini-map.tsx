@@ -5,6 +5,7 @@ import type { Map as MLMap, GeoJSONSource } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { useI18n } from "@/components/i18n/i18n-provider";
 import { JEDDAH_CENTER, loadMapStyle } from "@/lib/map/style";
+import { getMaplibre } from "@/lib/map/maplibre";
 import type { GeoPolygon } from "@/lib/db/schema";
 
 export type MiniMarker = {
@@ -51,7 +52,7 @@ export function MiniMap({
     const htmlMarkers: { remove: () => void }[] = [];
     (async () => {
       try {
-        const maplibregl = await import("maplibre-gl");
+        const maplibregl = await getMaplibre();
         const style = await loadMapStyle(locale);
         if (cancelled || !el.current) return;
         const m = new maplibregl.Map({
@@ -143,7 +144,7 @@ export function MiniMap({
 
   return (
     <div className={`relative overflow-hidden rounded-2xl bg-sand-200 ${className}`} role="region" aria-label={ariaLabel}>
-      <div ref={el} className="absolute inset-0" />
+      <div ref={el} style={{ position: "absolute", inset: 0 }} />
       {failed && (
         <div className="absolute inset-0 grid place-items-center p-6 text-center text-sm text-ink-500">{t.map.loadError}</div>
       )}

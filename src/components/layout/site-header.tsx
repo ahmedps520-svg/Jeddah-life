@@ -21,13 +21,13 @@ export function SiteHeader({ unread }: { unread: number }) {
   const href = (p: string) => `/${locale}${p === "/" ? "" : p}`;
 
   const desktopLinks = [
-    { href: "/explore", label: t.nav.explore },
-    { href: "/map", label: t.nav.map },
-    { href: "/plan", label: t.nav.planner },
-    { href: "/make-it-happen", label: t.nav.makeItHappen },
-    { href: "/events", label: t.nav.events },
-    { href: "/neighbourhoods", label: t.nav.neighbourhoods },
-    { href: "/together", label: t.nav.together },
+    { href: "/explore", label: t.nav.explore, xl: false },
+    { href: "/map", label: t.nav.map, xl: false },
+    { href: "/plan", label: t.nav.planner, xl: false },
+    { href: "/make-it-happen", label: t.nav.makeItHappen, xl: true },
+    { href: "/events", label: t.nav.events, xl: false },
+    { href: "/neighbourhoods", label: t.nav.neighbourhoods, xl: true },
+    { href: "/together", label: t.nav.together, xl: true },
   ];
 
   return (
@@ -37,7 +37,7 @@ export function SiteHeader({ unread }: { unread: number }) {
           <Wordmark locale={locale} />
         </Link>
 
-        <nav aria-label={t.nav.mainNav} className="ms-6 hidden items-center gap-1 lg:flex">
+        <nav aria-label={t.nav.mainNav} className="ms-4 hidden items-center gap-0.5 lg:flex">
           {desktopLinks.map((l) => {
             const active = rest.startsWith(l.href);
             return (
@@ -45,7 +45,7 @@ export function SiteHeader({ unread }: { unread: number }) {
                 key={l.href}
                 href={href(l.href)}
                 aria-current={active ? "page" : undefined}
-                className={`rounded-full px-3 py-1.5 text-sm transition ${
+                className={`${l.xl ? "hidden xl:inline-block" : ""} whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition ${
                   active ? "bg-white/10 text-white" : "text-ink-200 hover:bg-white/5 hover:text-white"
                 }`}
               >
