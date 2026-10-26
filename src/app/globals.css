@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/*
+ * JEDDAH LIFE design tokens.
+ * Deep navy ink, warm sand surfaces, a restrained sea-teal accent and a
+ * coral-gold used sparingly for editorial highlights.
+ */
+@theme {
+  --color-ink-950: #06111c;
+  --color-ink-900: #0b1b2b;
+  --color-ink-800: #12263a;
+  --color-ink-700: #1c3550;
+  --color-ink-600: #2e4a66;
+  --color-ink-500: #4f6a85;
+  --color-ink-400: #7d93a8;
+  --color-ink-300: #a9b9c8;
+  --color-ink-200: #d3dce5;
+  --color-ink-100: #e9eef3;
+
+  --color-sand-50: #fffdf9;
+  --color-sand-100: #f9f5ee;
+  --color-sand-200: #f2ebdf;
+  --color-sand-300: #e6dcc9;
+  --color-sand-400: #d2c3a7;
+  --color-sand-500: #b39f7d;
+
+  --color-sea-50: #eaf7f6;
+  --color-sea-100: #cdeceb;
+  --color-sea-200: #9fd8d5;
+  --color-sea-300: #63bdb9;
+  --color-sea-400: #2f9e9b;
+  --color-sea-500: #127c83;
+  --color-sea-600: #0e6670;
+  --color-sea-700: #0b4f58;
+
+  --color-coral-400: #e8957a;
+  --color-coral-500: #d9734f;
+  --color-gold-400: #cfae74;
+  --color-gold-500: #b8955a;
+
+  --font-display: var(--font-display-en), var(--font-display-ar), ui-serif, Georgia, serif;
+  --font-sans: var(--font-sans-en), var(--font-sans-ar), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(11 27 43 / 0.06), 0 8px 24px -12px rgb(11 27 43 / 0.18);
+  --shadow-lift: 0 2px 4px rgb(11 27 43 / 0.06), 0 18px 40px -18px rgb(11 27 43 / 0.35);
+  --shadow-sheet: 0 -12px 40px -12px rgb(6 17 28 / 0.35);
+
+  --radius-card: 14px;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-fade-up: fade-up 420ms var(--ease-out-soft) both;
+  --animate-fade-in: fade-in 300ms ease-out both;
+  --animate-sheet-up: sheet-up 380ms var(--ease-out-soft) both;
+  --animate-pop: pop 360ms var(--ease-out-soft) both;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+  @keyframes pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.28); }
+    100% { transform: scale(1); }
+  }
+  @keyframes shimmer {
+    from { background-position: -400px 0; }
+    to { background-position: 400px 0; }
+  }
+}
+
+:root {
+  color-scheme: light;
+  --header-h: 64px;
+  --bottom-nav-h: 68px;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-sand-100);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+}
+
+/* Arabic needs a touch more line height and no letter-spacing. */
+html[lang="ar"] body {
+  line-height: 1.7;
+}
+html[lang="ar"] .tracking-wide,
+html[lang="ar"] .tracking-wider,
+html[lang="ar"] .tracking-widest,
+html[lang="ar"] .tracking-tight {
+  letter-spacing: 0;
+}
+html[lang="ar"] .uppercase {
+  text-transform: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-sea-400);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Horizontal carousels: snap, hide scrollbar, keep keyboard scroll. */
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-padding-inline: 16px;
+}
+.rail::-webkit-scrollbar {
+  display: none;
+}
+.rail > * {
+  scroll-snap-align: start;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--color-sand-200) 0px, var(--color-sand-100) 120px, var(--color-sand-200) 240px);
+  background-size: 800px 100%;
+  animation: var(--animate-shimmer);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* MapLibre controls in brand colours */
+.maplibregl-ctrl-group {
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-card) !important;
+  overflow: hidden;
+}
+.maplibregl-ctrl-attrib {
+  font-size: 10px;
+}
+
+/* Language switch cross-fade */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
