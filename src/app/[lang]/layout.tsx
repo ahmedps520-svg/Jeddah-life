@@ -12,6 +12,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { BottomNav } from "@/components/layout/bottom-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { ServiceWorker } from "@/components/layout/service-worker";
+import { HideOn } from "@/components/layout/hide-on";
 
 const displayEn = Fraunces({ subsets: ["latin"], variable: "--font-display-en", display: "swap", axes: ["opsz", "SOFT"] });
 const sansEn = Inter({ subsets: ["latin"], variable: "--font-sans-en", display: "swap" });
@@ -79,10 +80,12 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
               {t.nav.skipToContent}
             </a>
             <SiteHeader unread={unread} />
-            <main id="content" className="min-h-[60dvh] pb-[calc(var(--bottom-nav-h)+env(safe-area-inset-bottom))] md:pb-0">
+            <main id="content" className="min-h-[60dvh]">
               {children}
             </main>
-            <SiteFooter />
+            <HideOn paths={["/map"]}>
+              <SiteFooter />
+            </HideOn>
             <BottomNav />
             <ServiceWorker />
           </AppStateProvider>

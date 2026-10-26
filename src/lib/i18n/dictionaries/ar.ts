@@ -370,6 +370,12 @@ const ar: Dictionary = {
     showAreas: "إظهار الأحياء",
     resultsInView: "في هذا النطاق",
     fitAll: "عرض كل النتائج",
+    listLimited: "نعرض {n} من أصل {total} مكان في هذا النطاق. قرّب الخريطة لرؤية البقية.",
+    searchPlaceholder: "ابحث في الخريطة — مثل «مقاهي في الزهراء»",
+    clearSearch: "مسح البحث",
+    preview: "معاينة المكان",
+    youAreHere: "موقعك هنا",
+    hoursUnknown: "الساعات غير مُدرجة",
     noWebgl: "متصفحك لا يدعم الخريطة التفاعلية. استخدم عرض القائمة بدلاً منها.",
   },
   saved: {

@@ -371,6 +371,12 @@ const en = {
     showAreas: "Show neighbourhoods",
     resultsInView: "In this view",
     fitAll: "Show all results",
+    listLimited: "Showing {n} of {total} places in view. Zoom in to see the rest.",
+    searchPlaceholder: "Search the map — e.g. “cafés in Al-Zahra”",
+    clearSearch: "Clear search",
+    preview: "Place preview",
+    youAreHere: "You are here",
+    hoursUnknown: "Hours not listed",
     noWebgl: "Your browser can't display the interactive map. Use the list view instead.",
   },
   saved: {
