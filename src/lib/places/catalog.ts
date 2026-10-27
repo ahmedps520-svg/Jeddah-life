@@ -5,10 +5,11 @@ import { neighbourhoods, placeStats, places, reviews, saves, type Place } from "
 import { costEstimate, haversineKm, priceLevelFrom, type LatLng } from "./estimates";
 import { openStatus, opensLate } from "./hours";
 import type { NeighbourhoodLite, PlaceLite } from "./types";
-import { HOOD_ALIASES, HOOD_DISPLAY, FEATURED_HOODS } from "./hood-aliases";
+import { HOOD_DISPLAY, FEATURED_HOODS } from "./hood-aliases";
 import { CATEGORIES, OUTDOORS, SUBCATEGORIES } from "@/lib/taxonomy";
 import { skeletons, stripArabicArticle, tokenize } from "@/lib/search/normalize";
 import type { HoodVocab } from "@/lib/search/parse";
+import { buildHoodVocab } from "@/lib/search/hood-vocab";
 import { cityToday } from "@/lib/i18n/format";
 
 /**
@@ -154,15 +155,7 @@ async function build(): Promise<Catalog> {
   hoods.sort((a, b) => a.nameEn.localeCompare(b.nameEn));
   const hoodBySlug = new Map(hoods.map((h) => [h.slug, h]));
 
-  const hoodVocab: HoodVocab[] = hoods.map((h) => {
-    const names = [h.nameEn, h.nameAr ?? "", ...(HOOD_ALIASES[h.slug] ?? [])].filter(Boolean);
-    const tokens = names.map((n) => tokenize(n)).filter((t) => t.length);
-    const sk = new Set<string>();
-    for (const t of tokens) if (t.length === 1) skeletons(t[0]).forEach((s) => sk.add(s));
-    return { slug: h.slug, tokens, skeletons: [...sk] };
-  });
-  // Longer names first so "south obhur" wins over "obhur".
-  hoodVocab.sort((a, b) => Math.max(...b.tokens.map((t) => t.length), 0) - Math.max(...a.tokens.map((t) => t.length), 0));
+  const hoodVocab: HoodVocab[] = buildHoodVocab(hoods);
 
   const placesLite = rows.map((p) => {
     const r = ratingMap.get(p.id);

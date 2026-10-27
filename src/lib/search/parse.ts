@@ -164,7 +164,11 @@ const RULES: Rule[] = [
     attr("groups"),
   ),
   words(
-    ["family", "families", "kids", "children", "child", "toddler", "toddlers", "عائله", "عائلي", "عائليه", "اطفال", "اولاد", "عيال", "بزران"],
+    [
+      "family friendly", "kid friendly", "kids friendly", "child friendly", "children friendly", "good for kids", "suitable for kids",
+      "family", "families", "kids", "children", "child", "toddler", "toddlers",
+      "مناسب للعائلات", "مناسب للاطفال", "عائله", "عائلي", "عائليه", "اطفال", "اولاد", "عيال", "بزران",
+    ],
     attr("family"),
   ),
 
