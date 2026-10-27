@@ -27,6 +27,7 @@ const notificationsAr = {
   },
   statuses: {
     hidden: "إخفاء",
+    restored: "إعادة إظهار",
     removed: "حذف",
     published: "إعادة نشر",
     approved: "تمت الموافقة عليه",

@@ -116,9 +116,11 @@ function messageFor(t: Dictionary, locale: Locale, type: string, p: Payload): st
   if (!template) return t.notifications.title;
   const title =
     localized(locale, str(p, "titleEn") ?? str(p, "title"), str(p, "titleAr")) ??
-    localized(locale, str(p, "placeEn"), str(p, "placeAr")) ??
+    localized(locale, str(p, "placeNameEn"), str(p, "placeNameAr")) ??
+    str(p, "name") ??
     "";
-  const status = (t.notifications.statuses as Record<string, string>)[str(p, "status") ?? ""] ?? str(p, "status") ?? "";
+  const rawStatus = str(p, "status") ?? str(p, "action") ?? "";
+  const status = (t.notifications.statuses as Record<string, string>)[rawStatus] ?? rawStatus;
   const when =
     type === "event_reminder"
       ? whenText(t, locale, str(p, "startDate"), null)
@@ -143,6 +145,6 @@ function targetFor(locale: Locale, type: string, p: Payload): string | null {
   if (type === "outing_reminder" && str(p, "itineraryId")) return `${base}/plan/${str(p, "itineraryId")}`;
   if (type.startsWith("plan_") && str(p, "code")) return `${base}/together/${str(p, "code")}`;
   if (type === "review_moderated" && str(p, "placeSlug")) return `${base}/place/${str(p, "placeSlug")}`;
-  if (type === "submission_reviewed") return `${base}/profile#submissions`;
+  if (type === "submission_reviewed") return str(p, "submissionId") ? `${base}/hidden-gems/${str(p, "submissionId")}` : `${base}/profile#submissions`;
   return null;
 }

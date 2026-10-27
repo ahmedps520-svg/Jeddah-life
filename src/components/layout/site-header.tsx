@@ -54,7 +54,7 @@ export function SiteHeader({ unread: initialUnread }: { unread: number }) {
           <Wordmark locale={locale} />
         </Link>
 
-        <nav aria-label={t.nav.mainNav} className="ms-4 hidden items-center gap-0.5 lg:flex">
+        <nav aria-label={t.nav.mainNav} className="ms-2 hidden items-center gap-0.5 lg:flex 2xl:ms-4">
           {desktopLinks.map((l) => {
             const active = rest.startsWith(l.href);
             return (
@@ -62,7 +62,7 @@ export function SiteHeader({ unread: initialUnread }: { unread: number }) {
                 key={l.href}
                 href={href(l.href)}
                 aria-current={active ? "page" : undefined}
-                className={`${l.xl ? "hidden xl:inline-block" : ""} whitespace-nowrap rounded-full px-3 py-1.5 text-sm transition ${
+                className={`${l.xl ? "hidden xl:inline-block" : ""} whitespace-nowrap rounded-full px-2.5 py-1.5 text-sm transition 2xl:px-3 ${
                   active ? "bg-white/10 text-white" : "text-ink-200 hover:bg-white/5 hover:text-white"
                 }`}
               >

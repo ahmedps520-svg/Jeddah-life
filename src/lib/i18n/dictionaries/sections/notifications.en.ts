@@ -27,6 +27,7 @@ const notificationsEn = {
   },
   statuses: {
     hidden: "hid",
+    restored: "restored",
     removed: "removed",
     published: "restored",
     approved: "approved",

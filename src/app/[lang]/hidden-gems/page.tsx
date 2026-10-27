@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Gem, Plus, Sparkles } from "lucide-react";
 import { getDictionary } from "@/lib/i18n/server";
 import { getCatalog } from "@/lib/places/catalog";
-import { communityGems, editorialGems, gemNotes } from "@/lib/gems";
+import { communityGemPlaceIds, communityGems, editorialGems, gemNotes } from "@/lib/gems";
 import { GEM_TYPES } from "@/lib/taxonomy";
 import { localized } from "@/lib/i18n/format";
 import { PlaceCard, type HoodNames } from "@/components/place/place-card";
@@ -20,7 +20,7 @@ export default async function HiddenGemsPage({ searchParams }: PageProps<"/[lang
   const sp = await searchParams;
   const type = typeof sp.type === "string" && GEM_TYPES.some((g) => g.slug === sp.type) ? sp.type : null;
   const catalog = await getCatalog();
-  const editorial = editorialGems(catalog, type);
+  const editorial = editorialGems(catalog, type, await communityGemPlaceIds());
   const [notes, community] = await Promise.all([gemNotes(editorial.map((p) => p.id)), communityGems(type)]);
   const hoods: HoodNames = Object.fromEntries(catalog.hoods.map((h) => [h.slug, { en: h.nameEn, ar: h.nameAr }]));
   const hoodName = (slug: string | null) => {
