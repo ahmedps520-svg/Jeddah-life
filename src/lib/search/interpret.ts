@@ -44,7 +44,7 @@ const Schema = z.object({
 
 const cache = new Map<string, ParsedQuery>();
 
-function aiEnabled() {
+export function aiEnabled() {
   return !!(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN) && process.env.SEARCH_AI !== "off";
 }
 

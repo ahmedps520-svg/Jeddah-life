@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0b1b2b"/>
+  <clipPath id="sun"><rect x="0" y="0" width="64" height="35"/></clipPath>
+  <circle cx="32" cy="35" r="15" fill="#E8957A" clip-path="url(#sun)"/>
+  <path d="M12 35.5h40" stroke="#F9F5EE" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M17.5 42.5c4.6-2.9 9.6-2.9 14.2 0s9.6 2.9 14.2 0" fill="none" stroke="#63BDB9" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M23 49.5c3.4-2.1 7.2-2.1 10.6 0s7.2 2.1 10.6 0" fill="none" stroke="#63BDB9" stroke-width="3.2" stroke-linecap="round" opacity="0.6"/>
+</svg>

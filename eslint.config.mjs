@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Agent worktrees, data and vendored files.
+    ".claude/**",
+    "data/**",
+    "public/vendor/**",
+    "public/sw.js",
   ]),
 ]);
 

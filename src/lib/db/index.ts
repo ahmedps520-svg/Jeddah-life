@@ -43,3 +43,21 @@ export const db = new Proxy({} as DB, {
 });
 
 export { schema };
+
+const readyState = globalThis as unknown as { __jlDbReady?: boolean };
+
+/**
+ * True once the database answers and has been migrated and seeded. Pages
+ * show a setup notice instead of failing when it isn't ready yet.
+ */
+export async function databaseReady(): Promise<boolean> {
+  if (readyState.__jlDbReady) return true;
+  try {
+    getDb();
+    const r = await globalForDb.__jlClient!.execute("select count(*) as n from places");
+    readyState.__jlDbReady = Number(r.rows[0]?.n ?? 0) > 0;
+  } catch {
+    readyState.__jlDbReady = false;
+  }
+  return readyState.__jlDbReady;
+}

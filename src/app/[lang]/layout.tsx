@@ -7,6 +7,7 @@ import { dictionaryFor } from "@/lib/i18n/server";
 import { I18nProvider } from "@/components/i18n/i18n-provider";
 import { AppStateProvider } from "@/components/providers/app-state";
 import { getCurrentUser } from "@/lib/auth/session";
+import { databaseReady } from "@/lib/db";
 import { generateDueReminders, unreadCount } from "@/lib/notifications";
 import { SiteHeader } from "@/components/layout/site-header";
 import { BottomNav } from "@/components/layout/bottom-nav";
@@ -60,7 +61,8 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const t = dictionaryFor(lang);
-  const user = await getCurrentUser();
+  const ready = await databaseReady();
+  const user = ready ? await getCurrentUser() : null;
   if (user) await generateDueReminders(user.id);
   const unread = user ? await unreadCount(user.id) : 0;
   const clientUser = user ? { id: user.id, displayName: user.displayName, avatarUrl: user.avatarUrl, role: user.role } : null;
@@ -82,7 +84,14 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
             </a>
             <SiteHeader unread={unread} />
             <main id="content" className="min-h-[60dvh]">
-              {children}
+              {ready ? (
+                children
+              ) : (
+                <div className="mx-auto max-w-xl px-4 py-20 text-center">
+                  <h1 className="font-display text-[32px] font-semibold">{t.errors.setupTitle}</h1>
+                  <p className="mt-3 text-ink-600">{t.errors.setupLede}</p>
+                </div>
+              )}
             </main>
             <HideOn paths={["/map"]}>
               <SiteFooter />

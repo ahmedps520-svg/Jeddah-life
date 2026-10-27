@@ -2,6 +2,7 @@ import type { PluralForms } from "../format";
 import adminEn from "./sections/admin.en";
 import notificationsEn from "./sections/notifications.en";
 import togetherEn from "./sections/together.en";
+import aboutEn from "./sections/about.en";
 
 const en = {
   meta: {
@@ -802,6 +803,7 @@ const en = {
   admin: adminEn,
   notifications: notificationsEn,
   together: togetherEn,
+  about: aboutEn,
   recs: {
     because: "Recommended because {reasons}.",
     enjoy: "you enjoy {x}",
