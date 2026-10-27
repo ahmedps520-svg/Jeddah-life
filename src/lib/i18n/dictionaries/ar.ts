@@ -1,4 +1,5 @@
 import type { Dictionary } from "./en";
+import adminAr from "./sections/admin.ar";
 
 const ar: Dictionary = {
   meta: {
@@ -779,6 +780,7 @@ const ar: Dictionary = {
     copied: "تم نسخ الرابط",
     failed: "تعذّرت المشاركة. انسخ الرابط من شريط العنوان.",
   },
+  admin: adminAr,
   recs: {
     because: "نقترحه لأن {reasons}.",
     enjoy: "تحب {x}",

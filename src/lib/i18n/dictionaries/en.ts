@@ -1,4 +1,5 @@
 import type { PluralForms } from "../format";
+import adminEn from "./sections/admin.en";
 
 const en = {
   meta: {
@@ -780,6 +781,7 @@ const en = {
     copied: "Link copied to clipboard",
     failed: "Couldn't share. Copy the link from the address bar.",
   },
+  admin: adminEn,
   recs: {
     because: "Recommended because {reasons}.",
     enjoy: "you enjoy {x}",
