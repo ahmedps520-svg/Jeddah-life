@@ -1,6 +1,7 @@
 import type { Dictionary } from "./en";
 import adminAr from "./sections/admin.ar";
 import notificationsAr from "./sections/notifications.ar";
+import togetherAr from "./sections/together.ar";
 
 const ar: Dictionary = {
   meta: {
@@ -799,6 +800,7 @@ const ar: Dictionary = {
   },
   admin: adminAr,
   notifications: notificationsAr,
+  together: togetherAr,
   recs: {
     because: "نقترحه لأن {reasons}.",
     enjoy: "تحب {x}",
