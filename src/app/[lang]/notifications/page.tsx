@@ -72,6 +72,11 @@ export default async function NotificationsPage() {
                 </span>
                 <div className="min-w-0 flex-1">
                   <p className="text-[15px] leading-snug text-ink-900">{text}</p>
+                  {(n.type === "review_moderated" || n.type === "submission_reviewed") && str(n.payload, "note") && (
+                    <p className="mt-1 text-sm text-ink-600" dir="auto">
+                      “{str(n.payload, "note")}”
+                    </p>
+                  )}
                   <p className="mt-1 text-xs text-ink-500">
                     {relativeTime(locale, n.createdAt)}
                     {!n.readAt && (
