@@ -1,5 +1,7 @@
 # JEDDAH LIFE
 
+**Live:** https://jeddah-life.onrender.com
+
 **Discover Your City Differently.** A bilingual (English / Arabic) city guide for Jeddah that answers one question: *what should we do today?*
 
 Everything in the app is built on real places and labelled honestly: where a detail came from, whether it has been verified, and whether a price or time is an estimate. Nothing is invented to make the app look busy.
@@ -114,3 +116,4 @@ tests/                 Unit tests
 - Set `SITE_URL` to the public URL.
 - Run `npm run setup` once against the production database, with `ADMIN_EMAIL`/`ADMIN_PASSWORD` set to create the first administrator.
 - Stop the server before re-seeding a local SQLite file.
+- The live demo runs on Render's free plan: build `npm ci && npm run setup && npm run build`, start `npm run setup && npm start`. Its filesystem is temporary, so accounts and saves reset when the service redeploys or sleeps after inactivity. For persistent data, use a paid instance with a disk mounted at `/var/data` and set `DATABASE_URL=file:/var/data/jeddah-life.db` and `UPLOAD_DIR=/var/data/uploads`; the start command seeds the empty disk on first boot.
