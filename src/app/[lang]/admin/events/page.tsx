@@ -138,7 +138,7 @@ export default async function AdminEvents({ searchParams }: PageProps<"/[lang]/a
       </p>
 
       {rows.length ? (
-        <div className="overflow-x-auto rounded-3xl bg-white shadow-card">
+        <div className="relative overflow-x-auto rounded-3xl bg-white shadow-card">
           <table className="w-full min-w-[760px] text-sm">
             <thead>
               <tr className="border-b border-sand-200 text-xs text-ink-500">

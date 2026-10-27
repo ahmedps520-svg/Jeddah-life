@@ -4,7 +4,8 @@ import { and, desc, eq, or, sql, type SQL } from "drizzle-orm";
 import { AlertTriangle, BadgeCheck, Gem, Plus, Search, Sparkles } from "lucide-react";
 import { getDictionary } from "@/lib/i18n/server";
 import { db } from "@/lib/db";
-import { neighbourhoods, places } from "@/lib/db/schema";
+import { places } from "@/lib/db/schema";
+import { getCatalog } from "@/lib/places/catalog";
 import { requireAdminPage } from "@/lib/admin/guard";
 import { staleCondition } from "@/lib/admin/dashboard";
 import { likePattern } from "@/lib/admin/places";
@@ -57,7 +58,7 @@ export default async function AdminPlaces({ searchParams }: PageProps<"/[lang]/a
   if (gem) conds.push(eq(places.hiddenGem, true));
   const where = conds.length ? and(...conds) : undefined;
 
-  const [[{ n: total }], rows, hoodRows] = await Promise.all([
+  const [[{ n: total }], rows, hoodList] = await Promise.all([
     db.select({ n: sql<number>`count(*)` }).from(places).where(where),
     db
       .select({
@@ -81,9 +82,9 @@ export default async function AdminPlaces({ searchParams }: PageProps<"/[lang]/a
       .orderBy(desc(places.updatedAt), places.slug)
       .limit(PAGE_SIZE)
       .offset((page - 1) * PAGE_SIZE),
-    db.select({ slug: neighbourhoods.slug, nameEn: neighbourhoods.nameEn, nameAr: neighbourhoods.nameAr }).from(neighbourhoods),
+    getCatalog().then((c) => c.hoods),
   ]);
-  const hoods = new Map(hoodRows.map((h) => [h.slug, locale === "ar" ? h.nameAr || h.nameEn : h.nameEn]));
+  const hoods = new Map(hoodList.map((h) => [h.slug, locale === "ar" ? h.nameAr || h.nameEn : h.nameEn]));
   const count = Number(total);
   const pages = Math.max(1, Math.ceil(count / PAGE_SIZE));
   const base = `/${locale}/admin/places`;
@@ -197,7 +198,7 @@ export default async function AdminPlaces({ searchParams }: PageProps<"/[lang]/a
       </p>
 
       {rows.length ? (
-        <div className="overflow-x-auto rounded-3xl bg-white shadow-card">
+        <div className="relative overflow-x-auto rounded-3xl bg-white shadow-card">
           <table className="w-full min-w-[760px] text-sm">
             <thead>
               <tr className="border-b border-sand-200 text-xs text-ink-500">

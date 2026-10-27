@@ -86,7 +86,7 @@ export default async function AdminDashboard({ searchParams }: PageProps<"/[lang
           <StatCard
             label={d.places}
             value={f(data.places.published)}
-            sub={`${d.published} · ${f(data.places.draft)} ${d.drafts} · ${f(data.places.archived)} ${d.archived}`}
+            sub={`${plural(locale, data.places.draft, d.draftsCount)} · ${plural(locale, data.places.archived, d.archivedCount)}`}
             href={`${base}/places`}
           />
           <StatCard label={d.reviews} value={f(data.reviews.total)} sub={d.reviewsLast30.replace("{n}", f(data.reviews.last30))} href={`${base}/reviews?tab=recent`} />

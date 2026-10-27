@@ -63,7 +63,7 @@ export default async function AdminAudit({ searchParams }: PageProps<"/[lang]/ad
     <div>
       <PageHeader title={a.title} lede={a.lede} />
       {rows.length ? (
-        <div className="overflow-x-auto rounded-3xl bg-white shadow-card">
+        <div className="relative overflow-x-auto rounded-3xl bg-white shadow-card">
           <table className="w-full min-w-[760px] text-sm">
             <thead>
               <tr className="border-b border-sand-200 text-xs text-ink-500">
