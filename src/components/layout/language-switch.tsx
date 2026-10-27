@@ -22,7 +22,7 @@ export function LanguageSwitch({ tone = "dark" }: { tone?: "dark" | "light" }) {
         window.location.assign(target + window.location.search + window.location.hash);
       }}
       aria-label={t.nav.languageLabel}
-      className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${
+      className={`rounded-full px-2 py-1.5 text-sm sm:px-3 font-medium transition ${
         tone === "dark" ? "text-ink-100 hover:bg-white/10" : "text-ink-700 hover:bg-sand-200"
       } ${other === "ar" ? "font-[family-name:var(--font-sans-ar)]" : ""}`}
     >

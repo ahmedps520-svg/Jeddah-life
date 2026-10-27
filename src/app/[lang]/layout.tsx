@@ -7,7 +7,7 @@ import { dictionaryFor } from "@/lib/i18n/server";
 import { I18nProvider } from "@/components/i18n/i18n-provider";
 import { AppStateProvider } from "@/components/providers/app-state";
 import { getCurrentUser } from "@/lib/auth/session";
-import { unreadCount } from "@/lib/notifications";
+import { generateDueReminders, unreadCount } from "@/lib/notifications";
 import { SiteHeader } from "@/components/layout/site-header";
 import { BottomNav } from "@/components/layout/bottom-nav";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -61,6 +61,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!isLocale(lang)) notFound();
   const t = dictionaryFor(lang);
   const user = await getCurrentUser();
+  if (user) await generateDueReminders(user.id);
   const unread = user ? await unreadCount(user.id) : 0;
   const clientUser = user ? { id: user.id, displayName: user.displayName, avatarUrl: user.avatarUrl, role: user.role } : null;
 

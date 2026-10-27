@@ -1,5 +1,6 @@
 import type { PluralForms } from "../format";
 import adminEn from "./sections/admin.en";
+import notificationsEn from "./sections/notifications.en";
 
 const en = {
   meta: {
@@ -782,6 +783,7 @@ const en = {
     failed: "Couldn't share. Copy the link from the address bar.",
   },
   admin: adminEn,
+  notifications: notificationsEn,
   recs: {
     because: "Recommended because {reasons}.",
     enjoy: "you enjoy {x}",

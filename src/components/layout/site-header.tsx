@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Bell, Search, UserRound } from "lucide-react";
@@ -11,10 +12,26 @@ import { LanguageSwitch } from "./language-switch";
 import { SearchBar } from "./search-bar";
 import { formatNumber } from "@/lib/i18n/format";
 
-export function SiteHeader({ unread }: { unread: number }) {
+export function SiteHeader({ unread: initialUnread }: { unread: number }) {
   const { t, locale } = useI18n();
   const user = useSession();
   const pathname = usePathname();
+  const [unread, setUnread] = useState(initialUnread);
+  const userId = user?.id;
+
+  // The layout isn't re-rendered on client navigation, so refresh the count
+  // (and let the server create any reminders that became due) as the user moves around.
+  useEffect(() => {
+    if (!userId) return;
+    const ctrl = new AbortController();
+    fetch("/api/me/notifications", { signal: ctrl.signal, cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { unread?: number } | null) => {
+        if (typeof d?.unread === "number") setUnread(d.unread);
+      })
+      .catch(() => {});
+    return () => ctrl.abort();
+  }, [pathname, userId]);
   const rest = pathname.replace(/^\/(en|ar)/, "") || "/";
   const isHome = rest === "/";
   const isMap = rest.startsWith("/map");
@@ -32,7 +49,7 @@ export function SiteHeader({ unread }: { unread: number }) {
 
   return (
     <header className={`relative z-40 bg-ink-900 text-sand-50 ${isMap ? "" : "md:sticky md:top-0"}`}>
-      <div className="mx-auto flex h-[var(--header-h)] max-w-7xl items-center gap-3 px-4 md:px-6">
+      <div className="mx-auto flex h-[var(--header-h)] max-w-7xl items-center gap-2 px-4 sm:gap-3 md:px-6">
         <Link href={href("/")} className="shrink-0 rounded-lg" aria-label={t.brand.name}>
           <Wordmark locale={locale} />
         </Link>
@@ -55,14 +72,14 @@ export function SiteHeader({ unread }: { unread: number }) {
           })}
         </nav>
 
-        <div className="ms-auto flex items-center gap-1">
+        <div className="ms-auto flex shrink-0 items-center gap-0.5 sm:gap-1">
           <div className="hidden md:block">
             <LocationPicker variant="compact" />
           </div>
           {!isHome && (
             <Link
               href={href("/explore")}
-              className="rounded-full p-2.5 text-ink-200 transition hover:bg-white/10 hover:text-white"
+              className="rounded-full p-2 text-ink-200 transition hover:bg-white/10 hover:text-white sm:p-2.5"
               aria-label={t.common.search}
             >
               <Search className="size-5" />
@@ -72,7 +89,7 @@ export function SiteHeader({ unread }: { unread: number }) {
           {user && (
             <Link
               href={href("/notifications")}
-              className="relative rounded-full p-2.5 text-ink-200 transition hover:bg-white/10 hover:text-white"
+              className="relative rounded-full p-2 text-ink-200 sm:p-2.5 transition hover:bg-white/10 hover:text-white"
               aria-label={unread ? `${t.header.notifications} — ${t.header.unread.replace("{n}", formatNumber(locale, unread))}` : t.header.notifications}
             >
               <Bell className="size-5" />

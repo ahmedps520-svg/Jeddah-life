@@ -1,5 +1,6 @@
 import type { Dictionary } from "./en";
 import adminAr from "./sections/admin.ar";
+import notificationsAr from "./sections/notifications.ar";
 
 const ar: Dictionary = {
   meta: {
@@ -781,6 +782,7 @@ const ar: Dictionary = {
     failed: "تعذّرت المشاركة. انسخ الرابط من شريط العنوان.",
   },
   admin: adminAr,
+  notifications: notificationsAr,
   recs: {
     because: "نقترحه لأن {reasons}.",
     enjoy: "تحب {x}",

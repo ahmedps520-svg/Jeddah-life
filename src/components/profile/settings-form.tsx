@@ -202,7 +202,7 @@ export function SettingsForm({ init }: { init: SettingsInit }) {
         <Toggle checked={privacy.personalize} onChange={(v) => setPrivacy({ ...privacy, personalize: v })} label={t.profile.privacyPersonalize} hint={t.profile.privacyPersonalizeHint} />
       </section>
 
-      <section className={card} aria-labelledby="notif-title">
+      <section id="notifications" className={`${card} scroll-mt-24`} aria-labelledby="notif-title">
         <h2 id="notif-title" className="font-display text-xl font-semibold">
           {t.profile.notificationsPrefs}
         </h2>

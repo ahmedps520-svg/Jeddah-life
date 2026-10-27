@@ -22,8 +22,8 @@ export function Wordmark({ locale, className = "" }: { locale: "en" | "ar"; clas
       {locale === "ar" ? (
         <span className="font-display text-[22px] font-bold leading-none">جدة لايف</span>
       ) : (
-        <span className="font-display text-[19px] font-semibold leading-none tracking-[0.14em]">
-          JEDDAH<span className="ms-1.5 font-normal text-coral-400">LIFE</span>
+        <span className="whitespace-nowrap font-display text-[16px] font-semibold leading-none tracking-[0.1em] min-[400px]:text-[19px] min-[400px]:tracking-[0.14em]">
+          JEDDAH<span className="ms-1 font-normal text-coral-400 min-[400px]:ms-1.5">LIFE</span>
         </span>
       )}
     </span>
