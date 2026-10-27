@@ -1,11 +1,12 @@
 import "server-only";
 import { and, asc, eq, gte } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { events, heroSlides, submissions } from "@/lib/db/schema";
+import { categories, events, heroSlides, submissions, type ImageCredit } from "@/lib/db/schema";
 import type { Catalog } from "@/lib/places/catalog";
 import type { PlaceLite } from "@/lib/places/types";
 import { inCategory } from "@/lib/search/engine";
 import { cityToday } from "@/lib/i18n/format";
+import { CATEGORIES } from "@/lib/taxonomy";
 
 /** Shared ranking for editorial-style rails: quality first, then variety. */
 export function rankPlaces(list: PlaceLite[], limit: number, opts: { perBrand?: number; perCategory?: number } = {}): PlaceLite[] {
@@ -87,7 +88,11 @@ export function hiddenGemPlaces(c: Catalog): PlaceLite[] {
 
 export function categoryCover(c: Catalog, slug: string): PlaceLite | null {
   const withImg = c.places.filter((p) => p.img && inCategory(p, slug));
-  return rankPlaces(withImg, 1)[0] ?? null;
+  // Use a photo of a place that is primarily this kind of place (no street
+  // photo on the restaurants tile); derived categories like nightlife have
+  // no primary places, so any match will do.
+  const isPrimary = c.places.some((p) => p.category === slug);
+  return rankPlaces(isPrimary ? withImg.filter((p) => p.category === slug) : withImg, 1)[0] ?? null;
 }
 
 export function categoryCount(c: Catalog, slug: string): number {
@@ -119,4 +124,45 @@ export async function approvedGemSubmissions(limit = 12) {
     .where(eq(submissions.status, "approved"))
     .orderBy(asc(submissions.createdAt))
     .limit(limit);
+}
+
+export type HomeCategory = {
+  slug: string;
+  href: string;
+  name: { en: string; ar: string };
+  tagline: { en: string; ar: string };
+  cover: ImageCredit | null;
+};
+
+/**
+ * The twelve home tiles. Names, taglines, order, visibility and cover come
+ * from the categories table so editors can change them in the admin area;
+ * the built-in taxonomy is the fallback.
+ */
+export async function getHomeCategories(): Promise<HomeCategory[]> {
+  const builtIn = (c: (typeof CATEGORIES)[number]): HomeCategory => ({
+    slug: c.slug,
+    href: c.href ?? `/category/${c.slug}`,
+    name: c.name,
+    tagline: c.tagline,
+    cover: null,
+  });
+  try {
+    const rows = await db.select().from(categories).orderBy(asc(categories.sortOrder));
+    if (!rows.length) return CATEGORIES.map(builtIn);
+    const bySlug = new Map(CATEGORIES.map((c) => [c.slug as string, c]));
+    return rows
+      .filter((r) => r.showOnHome && bySlug.has(r.slug))
+      .map((r) => {
+        const def = builtIn(bySlug.get(r.slug)!);
+        return {
+          ...def,
+          name: { en: r.nameEn || def.name.en, ar: r.nameAr || def.name.ar },
+          tagline: { en: r.taglineEn || def.tagline.en, ar: r.taglineAr || def.tagline.ar },
+          cover: r.cover ?? null,
+        };
+      });
+  } catch {
+    return CATEGORIES.map(builtIn);
+  }
 }

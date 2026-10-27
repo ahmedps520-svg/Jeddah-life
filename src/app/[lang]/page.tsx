@@ -11,6 +11,7 @@ import {
   editorsPicks,
   familyFriendly,
   getHeroSlides,
+  getHomeCategories,
   hiddenGemPlaces,
   newPlaces,
   trending,
@@ -20,7 +21,6 @@ import {
   worthVisiting,
 } from "@/lib/home";
 import { explain, popularWithPlanningFriends, recommendFor } from "@/lib/recommend";
-import { CATEGORIES } from "@/lib/taxonomy";
 import { Hero, type HeroSlide } from "@/components/home/hero";
 import { GemCard } from "@/components/gems/gem-card";
 import { Rail } from "@/components/home/rail";
@@ -34,7 +34,7 @@ import { RecommendationCard } from "@/components/home/recommendation-card";
 
 export default async function HomePage() {
   const { t, locale } = await getDictionary();
-  const [catalog, user, slidesRaw, events] = await Promise.all([getCatalog(), getCurrentUser(), getHeroSlides(), upcomingEvents(10)]);
+  const [catalog, user, slidesRaw, events, homeCats] = await Promise.all([getCatalog(), getCurrentUser(), getHeroSlides(), upcomingEvents(10), getHomeCategories()]);
 
   const hoods: HoodNames = Object.fromEntries(catalog.hoods.map((h) => [h.slug, { en: h.nameEn, ar: h.nameAr }]));
   const hoodName = (slug: string) => {
@@ -78,11 +78,11 @@ export default async function HomePage() {
           </div>
         </div>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {CATEGORIES.map((c, i) => {
-            const cover = c.slug === "events" || c.slug === "hidden-gems" ? null : categoryCover(catalog, c.slug);
+          {homeCats.map((c, i) => {
+            const cover = c.cover ? { img: c.cover } : c.slug === "events" || c.slug === "hidden-gems" ? null : categoryCover(catalog, c.slug);
             const count =
               c.slug === "events" ? events.length : c.slug === "hidden-gems" ? gems.length : categoryCount(catalog, c.slug);
-            const href = c.href ?? `/category/${c.slug}`;
+            const href = c.href;
             return (
               <li key={c.slug} className="animate-fade-up" style={{ animationDelay: `${i * 30}ms` }}>
                 <Link
