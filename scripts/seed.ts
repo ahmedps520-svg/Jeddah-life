@@ -150,7 +150,8 @@ function inferAttributes(category: string, sub: string | null, secondary: string
   if (["entertainment", "adventure", "sports", "beaches", "outdoors"].includes(category) || has("family")) set("groups", true);
   if (category === "shopping" && /mall|souq|shopping_street/.test(s)) set("free", true);
   // Public spaces with no entry: districts, streets, mosques, parks, promenades and outdoor landmarks.
-  if (/^(district|shopping_street|souq|mosque|park|waterfront|landmark)$/.test(s)) set("free", true);
+  // Not beaches: many in Jeddah (especially Obhur) charge for access.
+  if (category !== "beaches" && /^(district|shopping_street|souq|mosque|park|waterfront|landmark)$/.test(s)) set("free", true);
   return a;
 }
 
