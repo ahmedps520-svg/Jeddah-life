@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Atallah Happy Land Park",
+    "reason": "closed",
+    "detail": "Reported closed after ~39 years (announced on its official Instagram); ticket listing shows 'event ended'. Overture still lists stale points.",
+    "sources": [
+      "https://curlytales.com/ct-scoop/jeddahs-atallah-happy-land-park-bids-farewell-after-three-decades-in-the-kingdom/",
+      "https://jeddah.platinumlist.net/event-tickets/81116/atallah-happy-land-park"
+    ]
+  },
+  {
+    "name": "Abdul Raouf Khalil Museum",
+    "reason": "merged",
+    "detail": "Same complex as Al-Tayebat International City Museum (Arabic Wikipedia places the museum in Al-Tayebat City, Al-Faisaliyah). Kept once as slug al-tayebat-international-city-museum, status uncertain (no official site; operating status inferred from 2024-2026 press).",
+    "sources": [
+      "https://ar.wikipedia.org/wiki/متحف_عبد_الرؤوف_خليل"
+    ]
+  },
+  {
+    "name": "Bait Al-Hodaif",
+    "reason": "unverifiable",
+    "detail": "Only source is a 2019 Arab News feature; not in OSM; Overture point uses a defunct Google business.site URL. Current operation and exact entrance not confirmable.",
+    "sources": [
+      "https://www.arabnews.pk/node/1502086"
+    ]
+  },
+  {
+    "name": "Le Mall (Tahlia)",
+    "reason": "unverifiable",
+    "detail": "Not in OSM, no official website; Overture low-confidence point (21.5537, 39.1674); Malls.com profile 'pending'. A Commons caption mentions it but current status unknown.",
+    "sources": [
+      "https://www.malls.com/city/jeddah/"
+    ]
+  },
+  {
+    "name": "Silver Sands Beach (Obhur)",
+    "reason": "no official site",
+    "detail": "OSM node/502863852 'Silver Sands Private Beach Club' exists, but no official booking site could be reached/found; only third-party tour listings with unverified prices. Brief requires an official site for bookable beaches.",
+    "sources": [
+      "https://www.openstreetmap.org/node/502863852"
+    ]
+  },
+  {
+    "name": "Other private Obhur beaches/resorts (Dream Beach, La Plage, Coral Beach, etc.)",
+    "reason": "no official site / private",
+    "detail": "OSM/Overture entries exist but official sites were unreachable or absent; mostly members/day-pass resorts.",
+    "sources": []
+  },
+  {
+    "name": "Jeddah open-air sculpture museum (Al-Hamra Corniche)",
+    "reason": "location not precisely verifiable",
+    "detail": "Described as lying between Al-Anani Mosque and Al-Salam Palace on the Al-Hamra Corniche, but only a single Overture point (21.5334, 39.1578) gives a location and sculptures have been removed for maintenance at times. Not in OSM/Wikidata.",
+    "sources": [
+      "https://www.arabnews.com/aljci-maintain-al-hamra-corniche-sculptures"
+    ]
+  },
+  {
+    "name": "Xtreme Play (trampoline park)",
+    "reason": "location unverifiable",
+    "detail": "Official site (xtremeplay.sa) confirms a Jeddah trampoline park but gives no address; not in OSM; Overture-only coordinates.",
+    "sources": [
+      "https://www.xtremeplay.sa/"
+    ]
+  },
+  {
+    "name": "Al-Haddad Scuba (Obhur)",
+    "reason": "location unverifiable",
+    "detail": "Official site live (haddadscuba.com) but no address found; not in OSM; Overture-only coordinates.",
+    "sources": [
+      "https://haddadscuba.com/"
+    ]
+  },
+  {
+    "name": "Other Obhur dive centres (Descent Dive Club, La Plage Diving Center, Blue Reef, Poseidon)",
+    "reason": "unverifiable",
+    "detail": "Either official site unreachable (Descent) or OSM entry without any website (La Plage, way/623158565).",
+    "sources": []
+  },
+  {
+    "name": "Bowling alleys / karting (Jeddah Lanes, In10so, The Track)",
+    "reason": "unverifiable",
+    "detail": "No OSM entries found via Nominatim and no reachable official sites; Overture-only.",
+    "sources": []
+  },
+  {
+    "name": "KidZania Jeddah",
+    "reason": "kept as uncertain",
+    "detail": "Included with status=uncertain: official site behind bot check, no 2024-2026 news; Overture point inside Mall of Arabia.",
+    "sources": [
+      "https://www.attractionsmanagement.com/attractions-news/KidZania-launches-third-location-in-the-Middle-East/313603"
+    ]
+  },
+  {
+    "name": "Khuzam Palace / Jeddah Regional Museum",
+    "reason": "kept as uncertain",
+    "detail": "Included with status=uncertain: no closure notice found but current public opening not confirmed.",
+    "sources": [
+      "https://saudipedia.com/en/jeddah-regional-museum"
+    ]
+  },
+  {
+    "name": "North Corniche / Al-Hamra Corniche (as separate entries)",
+    "reason": "merged",
+    "detail": "North Corniche covered by jeddah-waterfront (ROSHN Waterfront); Al-Hamra Corniche covered by middle-corniche-park.",
+    "sources": []
+  },
+  {
+    "name": "Jeddah Tower",
+    "reason": "not open",
+    "detail": "Under construction (OSM building=construction).",
+    "sources": [
+      "https://www.openstreetmap.org/way/312055706"
+    ]
+  },
+  {
+    "name": "Qishla of Jeddah",
+    "reason": "not open to visitors",
+    "detail": "OSM tags tourism=no / attraction=no.",
+    "sources": [
+      "https://www.openstreetmap.org/way/41409163"
+    ]
+  },
+  {
+    "name": "Large neighbourhood parks (Rawdah Park, Al-Ajwad Park, Al-Salamah parks)",
+    "reason": "insufficient sources",
+    "detail": "Exist in OSM (e.g. Rawdah Park way/53198139) but no independent source for facts/status; only Prince Majid Park included.",
+    "sources": []
+  },
+  {
+    "name": "Art galleries (Athr Gallery, Hafez Gallery, Darat Safeya Binzagr)",
+    "reason": "location unverifiable",
+    "detail": "Not found in OSM via Nominatim; Overture-only coordinates.",
+    "sources": []
+  },
+  {
+    "name": "Muvi Cinemas (Ar Ruwais) and other cinemas",
+    "reason": "not needed",
+    "detail": "Brief asked for 3-5 cinemas; four best-documented kept (OSM node/14046790501 Muvi Ar Ruwais exists if more are wanted).",
+    "sources": []
+  }
+]

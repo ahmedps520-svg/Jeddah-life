@@ -1,0 +1,182 @@
+[
+  {
+    "id": "hero-historic-1",
+    "theme": "historic",
+    "href": "/neighbourhoods/al-balad",
+    "titleEn": "Wander historic Al-Balad",
+    "titleAr": "تجوّل في البلد التاريخية",
+    "subtitleEn": "Coral-stone houses, roshan balconies and old souqs in a UNESCO World Heritage Site.",
+    "subtitleAr": "بيوت من الحجر المنقبي ورواشين خشبية وأسواق قديمة في موقع مُدرج على قائمة التراث العالمي.",
+    "image": {
+      "url": "/images/hero/hero-historic-1.webp",
+      "width": 1600,
+      "height": 1067,
+      "alt": "Cafe tables beneath roshan-fronted houses in Historic Jeddah (Al-Balad)",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad,_Yeda,_Arabia_Saudita,_2025-05-24,_DD_24.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-waterfront-2",
+    "theme": "waterfront",
+    "href": "/place/king-fahds-fountain",
+    "titleEn": "Sunset by the Red Sea",
+    "titleAr": "غروب على البحر الأحمر",
+    "subtitleEn": "Watch King Fahd's Fountain rise over the water from the Corniche.",
+    "subtitleAr": "شاهد نافورة الملك فهد ترتفع فوق الماء من الكورنيش.",
+    "image": {
+      "url": "/images/hero/hero-waterfront-2.webp",
+      "width": 1600,
+      "height": 902,
+      "alt": "Sunset over the Red Sea with King Fahd's Fountain, seen from the Corniche",
+      "author": "Mjakhro",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Fountatain_1.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-modern-2",
+    "theme": "entertainment",
+    "href": "/category/entertainment",
+    "titleEn": "Jeddah after dark",
+    "titleAr": "جدة بعد الغروب",
+    "subtitleEn": "Cinemas, late cafés and evening plans across the city.",
+    "subtitleAr": "سينما ومقاهٍ تسهر حتى وقت متأخر وخطط مسائية في أنحاء المدينة.",
+    "image": {
+      "url": "/images/hero/hero-modern-2.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Lit towers and the palm-lined promenade of the Jeddah Waterfront at night",
+      "author": "Kolaiel",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_at_Night.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-food-1",
+    "theme": "food",
+    "href": "/category/restaurants",
+    "titleEn": "Taste the city",
+    "titleAr": "تذوّق المدينة",
+    "subtitleEn": "From souq snacks to seafood — find where to eat tonight.",
+    "subtitleAr": "من مكسّرات الأسواق إلى المأكولات البحرية، اعرف أين تأكل الليلة.",
+    "image": {
+      "url": "/images/hero/hero-food-1.webp",
+      "width": 1600,
+      "height": 957,
+      "alt": "Nuts piled high for sale at a Jeddah souq",
+      "author": "Arbitrarily0",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_cashews_and_pistachios.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-outdoor-1",
+    "theme": "weekend",
+    "href": "/neighbourhoods/abhur-ash-shamaliyah",
+    "titleEn": "Weekend by the water",
+    "titleAr": "عطلة على البحر",
+    "subtitleEn": "Beaches, diving and long afternoons around Sharm Obhur.",
+    "subtitleAr": "شواطئ وغوص وأمسيات طويلة حول شرم أبحر.",
+    "image": {
+      "url": "/images/hero/hero-outdoor-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Weekend beach at Almahazem, North Obhur",
+      "author": "Kolaiel",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Almahazem_beach_1.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-waterfront-1",
+    "theme": "waterfront",
+    "href": "/place/jeddah-waterfront",
+    "titleEn": "Sea air on the Corniche",
+    "titleAr": "نسيم البحر على الكورنيش",
+    "subtitleEn": "Promenades, beaches and parks along the Red Sea.",
+    "subtitleAr": "ممشى وشواطئ وحدائق على امتداد البحر الأحمر.",
+    "image": {
+      "url": "/images/hero/hero-waterfront-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Beach and promenade on the Jeddah Corniche with seafront towers",
+      "author": "Radosław Botev",
+      "license": "CC BY 3.0 pl",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Corniche_(1).jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-modern-1",
+    "theme": "entertainment",
+    "href": "/place/jeddah-yacht-club",
+    "titleEn": "Marina evenings",
+    "titleAr": "أمسيات المارينا",
+    "subtitleEn": "Waterfront dining and city views at the Jeddah Yacht Club.",
+    "subtitleAr": "مطاعم على الواجهة البحرية وإطلالات على المدينة في نادي جدة لليخوت.",
+    "image": {
+      "url": "/images/hero/hero-modern-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "The sail-shaped landmark at Jeddah Yacht Club & Marina on the North Corniche",
+      "author": "Kolaiel",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Yacht_Club_3.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-historic-2",
+    "theme": "historic",
+    "href": "/category/culture",
+    "titleEn": "Gates, souqs and stories",
+    "titleAr": "أبواب وأسواق وحكايات",
+    "subtitleEn": "Museums, heritage houses and landmarks worth the trip.",
+    "subtitleAr": "متاحف وبيوت تراثية ومعالم تستحق الزيارة.",
+    "image": {
+      "url": "/images/hero/hero-historic-2.webp",
+      "width": 1600,
+      "height": 1250,
+      "alt": "Coral-stone houses with wooden roshan balconies in Al-Balad",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad,_Yeda,_Arabia_Saudita,_2025-05-24,_DD_14.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "id": "hero-outdoor-2",
+    "theme": "weekend",
+    "href": "/category/beaches",
+    "titleEn": "Open-air weekends",
+    "titleAr": "عطلات في الهواء الطلق",
+    "subtitleEn": "Public promenades and beaches for an easy day out.",
+    "subtitleAr": "ممشى وشواطئ عامة ليوم خروج بسيط.",
+    "image": {
+      "url": "/images/hero/hero-outdoor-2.webp",
+      "width": 1600,
+      "height": 1202,
+      "alt": "The public South Obhur waterfront promenade and swimming beach",
+      "author": "Kolaiel",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront.jpg",
+      "origin": "commons"
+    }
+  }
+]

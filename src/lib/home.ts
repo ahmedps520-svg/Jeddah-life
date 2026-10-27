@@ -8,7 +8,7 @@ import { inCategory } from "@/lib/search/engine";
 import { cityToday } from "@/lib/i18n/format";
 
 /** Shared ranking for editorial-style rails: quality first, then variety. */
-function rank(list: PlaceLite[], limit: number, opts: { perBrand?: number; perCategory?: number } = {}): PlaceLite[] {
+export function rankPlaces(list: PlaceLite[], limit: number, opts: { perBrand?: number; perCategory?: number } = {}): PlaceLite[] {
   const q = (p: PlaceLite) =>
     (p.ver === "verified" ? 8 : 0) +
     (p.pick ? 6 : 0) +
@@ -40,11 +40,11 @@ export function trending(c: Catalog): PlaceLite[] {
 }
 
 export function editorsPicks(c: Catalog): PlaceLite[] {
-  return rank(c.places.filter((p) => p.pick), 12, { perCategory: 4 });
+  return rankPlaces(c.places.filter((p) => p.pick), 12, { perCategory: 4 });
 }
 
 export function worthVisiting(c: Catalog): PlaceLite[] {
-  return rank(
+  return rankPlaces(
     c.places.filter((p) => p.ver === "verified" && ["culture", "outdoors", "beaches", "entertainment", "family", "shopping"].includes(p.category)),
     12,
     { perCategory: 3 },
@@ -52,7 +52,7 @@ export function worthVisiting(c: Catalog): PlaceLite[] {
 }
 
 export function under50(c: Catalog): PlaceLite[] {
-  return rank(
+  return rankPlaces(
     c.places.filter((p) => p.cost.planning != null && p.cost.planning <= 50 && !p.chain),
     12,
     { perCategory: 3 },
@@ -60,7 +60,7 @@ export function under50(c: Catalog): PlaceLite[] {
 }
 
 export function weekend(c: Catalog): PlaceLite[] {
-  return rank(
+  return rankPlaces(
     c.places.filter((p) => p.attrs.groups === true && ["entertainment", "adventure", "beaches", "outdoors", "family", "culture"].includes(p.category)),
     12,
     { perCategory: 3 },
@@ -68,7 +68,7 @@ export function weekend(c: Catalog): PlaceLite[] {
 }
 
 export function familyFriendly(c: Catalog): PlaceLite[] {
-  return rank(c.places.filter((p) => inCategory(p, "family")), 12, { perCategory: 3 });
+  return rankPlaces(c.places.filter((p) => inCategory(p, "family")), 12, { perCategory: 3 });
 }
 
 export function newPlaces(c: Catalog): PlaceLite[] {
@@ -82,12 +82,12 @@ export function newPlaces(c: Catalog): PlaceLite[] {
 }
 
 export function hiddenGemPlaces(c: Catalog): PlaceLite[] {
-  return rank(c.places.filter((p) => p.gem), 12);
+  return rankPlaces(c.places.filter((p) => p.gem), 12);
 }
 
 export function categoryCover(c: Catalog, slug: string): PlaceLite | null {
   const withImg = c.places.filter((p) => p.img && inCategory(p, slug));
-  return rank(withImg, 1)[0] ?? null;
+  return rankPlaces(withImg, 1)[0] ?? null;
 }
 
 export function categoryCount(c: Catalog, slug: string): number {

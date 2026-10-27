@@ -1,0 +1,110 @@
+[
+  {
+    "file": "images/hero-waterfront-1.jpg",
+    "theme": "waterfront",
+    "captionEn": "Beach and promenade on the Jeddah Corniche with seafront towers",
+    "commonsTitle": "File:Jeddah Corniche (1).jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Corniche_(1).jpg",
+    "author": "Radosław Botev",
+    "license": "CC BY 3.0 pl",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "file": "images/hero-waterfront-2.jpg",
+    "theme": "waterfront",
+    "captionEn": "Sunset over the Red Sea with King Fahd's Fountain, seen from the Corniche",
+    "commonsTitle": "File:Jeddah Fountatain 1.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Fountatain_1.jpg",
+    "author": "Mjakhro",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 1600,
+    "height": 902
+  },
+  {
+    "file": "images/hero-historic-1.jpg",
+    "theme": "historic",
+    "captionEn": "Cafe tables beneath roshan-fronted houses in Historic Jeddah (Al-Balad)",
+    "commonsTitle": "File:Al-Balad, Yeda, Arabia Saudita, 2025-05-24, DD 24.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad,_Yeda,_Arabia_Saudita,_2025-05-24,_DD_24.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1600,
+    "height": 1067
+  },
+  {
+    "file": "images/hero-historic-2.jpg",
+    "theme": "historic",
+    "captionEn": "Coral-stone houses with wooden roshan balconies in Al-Balad",
+    "commonsTitle": "File:Al-Balad, Yeda, Arabia Saudita, 2025-05-24, DD 14.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad,_Yeda,_Arabia_Saudita,_2025-05-24,_DD_14.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "width": 1600,
+    "height": 1250
+  },
+  {
+    "file": "images/hero-modern-1.jpg",
+    "theme": "modern",
+    "captionEn": "The sail-shaped landmark at Jeddah Yacht Club & Marina on the North Corniche",
+    "commonsTitle": "File:Jeddah Yacht Club 3.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Yacht_Club_3.jpg",
+    "author": "Kolaiel",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "file": "images/hero-modern-2.jpg",
+    "theme": "modern",
+    "captionEn": "Lit towers and the palm-lined promenade of the Jeddah Waterfront at night",
+    "commonsTitle": "File:Jeddah at Night.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_at_Night.jpg",
+    "author": "Kolaiel",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "file": "images/hero-food-1.jpg",
+    "theme": "food",
+    "captionEn": "Nuts piled high for sale at a Jeddah souq",
+    "commonsTitle": "File:Jeddah cashews and pistachios.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_cashews_and_pistachios.jpg",
+    "author": "Arbitrarily0",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "width": 1600,
+    "height": 957
+  },
+  {
+    "file": "images/hero-outdoor-1.jpg",
+    "theme": "outdoor",
+    "captionEn": "Weekend beach at Almahazem, North Obhur",
+    "commonsTitle": "File:Almahazem beach 1.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:Almahazem_beach_1.jpg",
+    "author": "Kolaiel",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "file": "images/hero-outdoor-2.jpg",
+    "theme": "outdoor",
+    "captionEn": "The public South Obhur waterfront promenade and swimming beach",
+    "commonsTitle": "File:South Abhur Waterfront.jpg",
+    "pageUrl": "https://commons.wikimedia.org/wiki/File:South_Abhur_Waterfront.jpg",
+    "author": "Kolaiel",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "width": 1600,
+    "height": 1202
+  }
+]

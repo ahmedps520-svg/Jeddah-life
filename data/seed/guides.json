@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "al-balad",
+    "sortOrder": 1,
+    "introEn": "Jeddah's historic core and a UNESCO World Heritage Site since 2014. Narrow lanes run between coral-stone houses with carved wooden roshan balconies, old city gates, mosques and covered souqs. Many historic houses are being restored, so the district changes from visit to visit.",
+    "introAr": "قلب جدة القديم، ومُدرج في قائمة التراث العالمي لليونسكو منذ عام ٢٠١٤. أزقة ضيقة بين بيوت من الحجر المنقبي برواشينها الخشبية المنقوشة، وأبواب المدينة القديمة والمساجد والأسواق المسقوفة. كثير من البيوت التاريخية قيد الترميم، فيتغيّر المكان من زيارة لأخرى.",
+    "practicalEn": "Late afternoon and evening are the most comfortable times to walk; midday can be very hot.\nThe lanes are pedestrian — wear comfortable shoes and park at the edge of the district.\nSome buildings are closed for restoration; check opening times before you go.\nShops often pause during prayer times. Modest dress is appreciated.",
+    "practicalAr": "أنسب وقت للتجوّل هو العصر والمساء؛ فالظهيرة قد تكون شديدة الحرارة.\nالأزقة مخصصة للمشاة، فالبس حذاءً مريحًا واركن سيارتك على أطراف المنطقة.\nبعض المباني مغلقة للترميم، فتحقّق من أوقات الزيارة قبل الذهاب.\nكثير من المحلات تُغلق وقت الصلاة، ويُستحسن اللباس المحتشم.",
+    "hero": {
+      "url": "/images/places/historic-jeddah-al-balad.webp",
+      "width": 1600,
+      "height": 1177,
+      "alt": "Historic Jeddah (Al-Balad)",
+      "author": "Diego Delso",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Al-Balad,_Yeda,_Arabia_Saudita,_2025-05-24,_DD_23.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "slug": "al-hamra",
+    "sortOrder": 2,
+    "introEn": "A central seaside district on the middle stretch of the Corniche, with waterfront promenades, hotels and a dense mix of restaurants and cafés a few streets back from the sea.",
+    "introAr": "حيّ ساحلي في وسط جدة على الجزء الأوسط من الكورنيش، يجمع بين ممشى الواجهة البحرية والفنادق ومجموعة كبيرة من المطاعم والمقاهي على بُعد شوارع قليلة من البحر.",
+    "practicalEn": "The waterfront is busiest after sunset and on weekend evenings (Thursday to Saturday).\nParking along the Corniche fills up on weekend nights; ride-hailing is often easier.\nBring water and sun protection for daytime walks — there is little shade.",
+    "practicalAr": "تزدحم الواجهة البحرية بعد المغرب وفي أمسيات نهاية الأسبوع (الخميس إلى السبت).\nمواقف الكورنيش تمتلئ في ليالي نهاية الأسبوع، وقد تكون تطبيقات التوصيل أسهل.\nاحمل الماء وواقي الشمس للمشي نهارًا، فالظل قليل.",
+    "hero": {
+      "url": "/images/places/king-fahds-fountain.webp",
+      "width": 1600,
+      "height": 1195,
+      "alt": "King Fahd's Fountain",
+      "author": "Mghamdi",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:JadFauW.JPG",
+      "origin": "commons"
+    }
+  },
+  {
+    "slug": "al-shatee",
+    "sortOrder": 3,
+    "introEn": "Ash Shati stretches along the northern Corniche. It combines seafront parks and promenades with some of the city's large malls, cinemas and a long line of cafés and restaurants.",
+    "introAr": "يمتد حي الشاطئ على الكورنيش الشمالي، ويجمع بين الحدائق والممشى البحري وبعض أكبر المراكز التجارية ودور السينما في المدينة، مع صف طويل من المقاهي والمطاعم.",
+    "practicalEn": "Seafront areas are most pleasant from late afternoon; summer middays are hot and humid.\nMalls and cinemas make it a good indoor option when it's too hot outside.\nWeekend evenings bring heavy traffic on the Corniche road — allow extra time.",
+    "practicalAr": "الواجهة البحرية ألطف من العصر فصاعدًا، أما ظهيرة الصيف فحارة ورطبة.\nالمراكز التجارية ودور السينما خيار جيد داخل المباني عندما يشتد الحر.\nيزدحم طريق الكورنيش في أمسيات نهاية الأسبوع، فاحسب وقتًا إضافيًا.",
+    "hero": {
+      "url": "/images/places/jeddah-waterfront.webp",
+      "width": 1600,
+      "height": 900,
+      "alt": "Jeddah Waterfront (ROSHN Waterfront)",
+      "author": "Tahir mq",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Art_1.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "slug": "al-rawdah",
+    "sortOrder": 4,
+    "introEn": "A busy central district crossed by Prince Sultan Road and close to Prince Mohammed bin Abdulaziz (Tahlia) Street. It is one of the densest areas in our listings for cafés and restaurants, from local spots to international chains.",
+    "introAr": "حيّ مركزي نابض بالحركة يمر به طريق الأمير سلطان ويقع قرب شارع الأمير محمد بن عبدالعزيز (التحلية). وهو من أكثر المناطق كثافة بالمقاهي والمطاعم في قائمتنا، من الأماكن المحلية إلى السلاسل العالمية.",
+    "practicalEn": "Most places are spread along main roads, so plan to drive or ride between them rather than walk.\nEvenings are the liveliest time; many cafés stay open late.\nStreet parking can be tight at peak hours.",
+    "practicalAr": "معظم الأماكن موزعة على الطرق الرئيسية، فخطط للتنقل بالسيارة بدل المشي.\nالمساء هو الوقت الأكثر حيوية، وكثير من المقاهي تبقى مفتوحة حتى وقت متأخر.\nقد يصعب إيجاد موقف في أوقات الذروة."
+  },
+  {
+    "slug": "al-zahra",
+    "sortOrder": 5,
+    "introEn": "A north-central district with cafés and restaurants along Prince Sultan Road, plus cinemas, escape rooms and art spaces — a good base for an evening out with friends.",
+    "introAr": "حيّ في شمال وسط جدة، فيه مقاهٍ ومطاعم على طريق الأمير سلطان، إلى جانب دور السينما وغرف الهروب والمساحات الفنية؛ نقطة انطلاق مناسبة لسهرة مع الأصدقاء.",
+    "practicalEn": "Places are spread out along main roads — a car or ride-hailing is the practical way to get around.\nCheck booking and opening times for escape rooms and cinemas before you go.",
+    "practicalAr": "الأماكن موزعة على الطرق الرئيسية، فالسيارة أو تطبيقات التوصيل هي الوسيلة العملية للتنقل.\nتحقّق من الحجز وأوقات العمل لغرف الهروب ودور السينما قبل الذهاب."
+  },
+  {
+    "slug": "abhur-ash-shamaliyah",
+    "sortOrder": 6,
+    "introEn": "North Obhur wraps around Sharm Obhur, the creek at Jeddah's northern edge. It is known for seaside resorts, beach clubs, diving and water sports, with cafés and restaurants along the waterfront roads.",
+    "introAr": "تحيط أبحر الشمالية بشرم أبحر، الخليج البحري في الطرف الشمالي لجدة. وتشتهر بالمنتجعات والشواطئ الخاصة والغوص والرياضات البحرية، مع مقاهٍ ومطاعم على الطرق المطلة على البحر.",
+    "practicalEn": "It is a drive from central Jeddah — allow extra time on weekend evenings.\nMany beaches here are private or require paid day access through a resort or beach club; check before you go.\nFor diving and boat trips, book with a licensed operator.",
+    "practicalAr": "تبعد مسافة بالسيارة عن وسط جدة، فاحسب وقتًا إضافيًا في أمسيات نهاية الأسبوع.\nكثير من الشواطئ هنا خاصة أو تتطلب دخولًا مدفوعًا عبر منتجع أو نادٍ شاطئي، فتحقّق قبل الذهاب.\nللغوص والرحلات البحرية، احجز مع جهة مرخّصة.",
+    "hero": {
+      "url": "/images/hero/hero-outdoor-1.webp",
+      "width": 1600,
+      "height": 1200,
+      "alt": "Weekend beach at Almahazem, North Obhur",
+      "author": "Kolaiel",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Almahazem_beach_1.jpg",
+      "origin": "commons"
+    }
+  },
+  {
+    "slug": "al-safa",
+    "sortOrder": 7,
+    "introEn": "A residential district in east-central Jeddah with everyday neighbourhood restaurants and cafés, many along Prince Mutaib Road — the kind of places locals go on a regular weeknight.",
+    "introAr": "حيّ سكني في شرق وسط جدة، فيه مطاعم ومقاهٍ يومية يرتادها أهل الحي، كثير منها على طريق الأمير متعب؛ من الأماكن التي يقصدها السكان في أمسيات الأسبوع العادية.",
+    "practicalEn": "A car or ride-hailing is the easiest way to get around.\nPrices tend to be everyday rather than special-occasion, but check each listing.",
+    "practicalAr": "السيارة أو تطبيقات التوصيل أسهل وسيلة للتنقل.\nالأسعار غالبًا يومية لا أسعار مناسبات، لكن راجع كل مكان على حدة."
+  }
+]

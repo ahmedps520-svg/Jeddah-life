@@ -23,7 +23,16 @@ function nextHour() {
 
 export const HANDOFF_KEY = "jl_plan_handoff";
 
-export function PlannerWizard({ mustInclude, mustIncludeName }: { mustInclude?: string | null; mustIncludeName?: string | null }) {
+export function PlannerWizard({
+  mustInclude,
+  mustIncludeName,
+  initialStart,
+}: {
+  mustInclude?: string | null;
+  mustIncludeName?: string | null;
+  /** Neighbourhood slug to start from, e.g. when coming from a neighbourhood guide */
+  initialStart?: string | null;
+}) {
   const { t, locale, dir } = useI18n();
   const toast = useToast();
   const { origin, location } = useCityLocation();
@@ -42,7 +51,7 @@ export function PlannerWizard({ mustInclude, mustIncludeName }: { mustInclude?: 
     transport: "car",
   });
   const [customBudget, setCustomBudget] = useState(false);
-  const [startChoice, setStartChoice] = useState<"anywhere" | "device" | string>("anywhere");
+  const [startChoice, setStartChoice] = useState<"anywhere" | "device" | string>(initialStart ?? "anywhere");
   const [result, setResult] = useState<{ plan: Plan; places: Record<string, PlaceLite>; settings: PlanSettings } | null>(null);
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);

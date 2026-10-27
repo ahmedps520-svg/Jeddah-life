@@ -78,6 +78,8 @@ type Anchor = {
   priceSource?: string | null;
   verifiedAt?: string;
   sourceDetail?: string;
+  /** "unverified" when the researcher couldn't confirm current details */
+  verification?: "verified" | "unverified";
 };
 
 type OverturePlace = {
@@ -262,7 +264,7 @@ async function main() {
       source: "editorial",
       sourceRef: a.coordSource,
       sourceDetail: a.sourceDetail ?? null,
-      verification: "verified",
+      verification: a.verification ?? "verified",
       lastVerifiedAt: a.verifiedAt ? new Date(a.verifiedAt) : new Date(),
       status: "published",
       editorsPick: !!a.editorsPick,

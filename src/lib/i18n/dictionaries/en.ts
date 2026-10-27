@@ -676,6 +676,7 @@ const en = {
     walkingRoute: "A walking route",
     walkingRouteNote: "These stops are within walking distance of each other. Total about {distance}, roughly {time} on foot plus time at each stop.",
     notWalkable: "Places here are spread out — plan to drive or ride between them.",
+    walkingEstimateNote: "Distances are estimated from straight lines with an allowance for streets, and the map joins stops with straight lines. Check the way in your maps app.",
     practical: "Practical information",
     itineraries: "Plan an outing here",
     itineraryCta: "Build an outing in {name}",
