@@ -22,6 +22,7 @@ import {
 import { explain, popularWithPlanningFriends, recommendFor } from "@/lib/recommend";
 import { CATEGORIES } from "@/lib/taxonomy";
 import { Hero, type HeroSlide } from "@/components/home/hero";
+import { GemCard } from "@/components/gems/gem-card";
 import { Rail } from "@/components/home/rail";
 import { NearYou } from "@/components/home/near-you";
 import { PlaceCard, type HoodNames } from "@/components/place/place-card";
@@ -236,6 +237,9 @@ export default async function HomePage() {
       {(gems.length > 0 || gemSubs.length > 0) && (
         <Rail id="gems" title={t.home.gems} note={t.home.gemsNote} href="/hidden-gems">
           {cards(gems, "gem")}
+          {gemSubs.map((g) => (
+            <GemCard key={g.id} g={g} locale={locale} t={t} hoodName={g.neighbourhood ? hoodName(g.neighbourhood) : null} />
+          ))}
         </Rail>
       )}
 

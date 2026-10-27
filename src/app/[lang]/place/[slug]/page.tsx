@@ -274,11 +274,12 @@ export default async function PlacePage({ params }: PageProps<"/[lang]/place/[sl
                 </ul>
               </div>
             )}
-            {place.tags.length > 0 && (
+            {/* Tags are English search keywords; internal ones (gem:…) are never shown. */}
+            {locale === "en" && place.tags.some((tag) => !tag.includes(":")) && (
               <div className="pt-2">
                 <h3 className="mb-2 text-sm font-semibold text-ink-600">{t.place.tags}</h3>
                 <ul className="flex flex-wrap gap-2 text-sm text-ink-600">
-                  {place.tags.map((tag) => (
+                  {place.tags.filter((tag) => !tag.includes(":")).map((tag) => (
                     <li key={tag}>#{tag}</li>
                   ))}
                 </ul>

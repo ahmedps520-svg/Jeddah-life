@@ -21,19 +21,19 @@
   {
     "slug": "al-hamra",
     "sortOrder": 2,
-    "introEn": "A central seaside district on the middle stretch of the Corniche, with waterfront promenades, hotels and a dense mix of restaurants and cafés a few streets back from the sea.",
-    "introAr": "حيّ ساحلي في وسط جدة على الجزء الأوسط من الكورنيش، يجمع بين ممشى الواجهة البحرية والفنادق ومجموعة كبيرة من المطاعم والمقاهي على بُعد شوارع قليلة من البحر.",
+    "introEn": "A central seaside district on the middle stretch of the Corniche — the stretch from which most people watch King Fahd's Fountain — with waterfront promenades, hotels and a dense mix of restaurants and cafés a few streets back from the sea.",
+    "introAr": "حيّ ساحلي في وسط جدة على الجزء الأوسط من الكورنيش، وهو الجزء الذي يشاهد منه أغلب الناس نافورة الملك فهد، ويجمع بين ممشى الواجهة البحرية والفنادق ومجموعة كبيرة من المطاعم والمقاهي على بُعد شوارع قليلة من البحر.",
     "practicalEn": "The waterfront is busiest after sunset and on weekend evenings (Thursday to Saturday).\nParking along the Corniche fills up on weekend nights; ride-hailing is often easier.\nBring water and sun protection for daytime walks — there is little shade.",
     "practicalAr": "تزدحم الواجهة البحرية بعد المغرب وفي أمسيات نهاية الأسبوع (الخميس إلى السبت).\nمواقف الكورنيش تمتلئ في ليالي نهاية الأسبوع، وقد تكون تطبيقات التوصيل أسهل.\nاحمل الماء وواقي الشمس للمشي نهارًا، فالظل قليل.",
     "hero": {
-      "url": "/images/places/king-fahds-fountain.webp",
+      "url": "/images/places/middle-corniche-park.webp",
       "width": 1600,
-      "height": 1195,
-      "alt": "King Fahd's Fountain",
-      "author": "Mghamdi",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:JadFauW.JPG",
+      "height": 900,
+      "alt": "Middle Corniche Park (Al-Hamra Corniche)",
+      "author": "Tahir mq",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jeddah_Corniche_5.jpg",
       "origin": "commons"
     }
   },

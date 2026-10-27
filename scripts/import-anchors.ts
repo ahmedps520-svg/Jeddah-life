@@ -170,6 +170,61 @@ const HERO_COPY: Record<string, { theme: string; href: string; titleEn: string; 
   },
 };
 
+/**
+ * Editors' hidden gems: worthwhile places that are easy to miss next to the
+ * city's headline sights. Each note sticks to the researched facts.
+ */
+const HIDDEN_GEMS: Record<string, { type: string; en: string; ar: string }> = {
+  "matbouli-house-museum": {
+    type: "lesser-known",
+    en: "A family house turned small museum of household antiques, a few steps from Souq Al-Alawi — easy to miss among Al-Balad's better-known sights.",
+    ar: "بيت عائلي تحوّل إلى متحف صغير للمقتنيات المنزلية القديمة، على بُعد خطوات من سوق العلوي؛ يسهل أن يفوتك بين معالم البلد الأشهر.",
+  },
+  "king-saud-mosque": {
+    type: "architecture",
+    en: "Abdel-Wahed El-Wakil's 1987 mosque in Al-Sharafiyah is a striking piece of modern Islamic architecture away from the usual visitor routes. Visit outside prayer times.",
+    ar: "مسجد الملك سعود في الشرفية من تصميم المعماري عبد الواحد الوكيل عام ١٩٨٧، عمل لافت من العمارة الإسلامية الحديثة بعيدًا عن مسارات الزوار المعتادة. زُره خارج أوقات الصلاة.",
+  },
+  "house-of-islamic-arts": {
+    type: "lesser-known",
+    en: "A museum of Islamic art inside the Jeddah Park complex, with more than 1,000 pieces spanning 15 centuries — an unexpected find next to the shops and cinema.",
+    ar: "متحف للفنون الإسلامية داخل مجمّع جدة بارك، يضم أكثر من ألف قطعة تمتد عبر خمسة عشر قرنًا؛ اكتشاف غير متوقع بجوار المحلات والسينما.",
+  },
+  "souq-qabil": {
+    type: "unique",
+    en: "A market street in Al-Balad dating from the early 1900s and named after the merchant Suliman Qabil, lined with shops selling spices, perfumes and household goods.",
+    ar: "شارع سوق في البلد يعود إلى مطلع القرن العشرين، سُمّي باسم التاجر سليمان قابل، وتصطف فيه محلات البهارات والعطور والأدوات المنزلية.",
+  },
+  "tariq-abdulhakim-center": {
+    type: "lesser-known",
+    en: "A museum in Al-Balad devoted to the Saudi composer and musician Tariq Abdulhakim, opened in December 2023 — one of the district's newer stops.",
+    ar: "متحف في البلد مخصّص للموسيقار السعودي طارق عبدالحكيم، افتُتح في ديسمبر ٢٠٢٣؛ من أحدث محطات المنطقة.",
+  },
+  "prince-majid-park": {
+    type: "quiet",
+    en: "A large public park in central Jeddah with a walking track, a cycle path and a big children's play area, reopened after redevelopment in 2024.",
+    ar: "حديقة عامة كبيرة في وسط جدة، فيها مسار للمشي ومسار للدراجات ومنطقة ألعاب واسعة للأطفال، وأُعيد افتتاحها بعد تطويرها في ٢٠٢٤.",
+  },
+};
+
+/**
+ * Arabic names for landmarks whose sources (OSM, Wikidata, official site)
+ * had none: the usual Arabic rendering of the place's name.
+ */
+const NAME_AR_FALLBACK: Record<string, string> = {
+  "matbouli-house-museum": "متحف بيت المتبولي",
+  "bab-sharif": "باب شريف",
+  "baeshen-house": "بيت باعشن",
+  "tariq-abdulhakim-center": "مركز طارق عبدالحكيم",
+  "middle-corniche-park": "حديقة الكورنيش الأوسط (كورنيش الحمراء)",
+  "al-arbaeen-lagoon": "بحيرة الأربعين",
+  "kidzania-jeddah": "كيدزانيا جدة",
+  "muvi-cinemas-mall-of-arabia": "موفي سينما - مول العرب",
+  "amc-cinemas-stars-avenue": "سينما AMC - ستارز أفينيو",
+  "roshan-mall": "روشان مول",
+  "jeddah-park": "جدة بارك",
+};
+
 /** Preferred guide photos; otherwise any researched photo inside the area is used. */
 const GUIDE_HERO: Record<string, string[]> = {
   "al-balad": ["historic-jeddah-al-balad", "nasseef-house"],
@@ -276,7 +331,7 @@ async function main() {
     anchors.push({
       slug: r.slug,
       nameEn: r.nameEn,
-      nameAr: r.nameAr,
+      nameAr: r.nameAr ?? NAME_AR_FALLBACK[r.slug] ?? null,
       category: r.category,
       secondaryCategories: r.secondaryCategories ?? [],
       subcategory: ed?.subcategory ?? DEFAULT_SUB[r.category] ?? "landmark",
@@ -293,11 +348,14 @@ async function main() {
       fee: r.fee,
       descriptionEn: ed?.descriptionEn ?? null,
       descriptionAr: ed?.descriptionAr ?? null,
-      tags: ed?.tags ?? [],
+      tags: [...(ed?.tags ?? []), ...(HIDDEN_GEMS[r.slug] ? [`gem:${HIDDEN_GEMS[r.slug].type}`] : [])],
       occasions: ed?.occasions ?? [],
       attributes,
       images,
       editorsPick: r.status === "verified" && !!ed?.editorsPick,
+      hiddenGem: r.status === "verified" && !!HIDDEN_GEMS[r.slug],
+      hiddenGemNoteEn: HIDDEN_GEMS[r.slug]?.en,
+      hiddenGemNoteAr: HIDDEN_GEMS[r.slug]?.ar,
       verification: r.status === "verified" ? "verified" : "unverified",
       verifiedAt: RESEARCHED_ON,
       sourceDetail: `Location: ${coordLabel(r.coordSource)}${urls.length ? ` · Sources: ${urls.join(" ")}` : ""}`,

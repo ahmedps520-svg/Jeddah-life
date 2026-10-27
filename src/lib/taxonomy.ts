@@ -217,7 +217,7 @@ export const SUBCATEGORIES: Record<string, Bilingual> = {
   souq: { en: "Souq", ar: "سوق" },
   shopping_street: { en: "Shopping street", ar: "شارع تسوّق" },
   movie_theater: { en: "Cinema", ar: "سينما" },
-  fairgrounds: { en: "Cinema", ar: "سينما" },
+  fairgrounds: { en: "Fairgrounds", ar: "أرض معارض" },
   escape_room: { en: "Escape room", ar: "غرفة هروب" },
   bowling_alley: { en: "Bowling", ar: "بولينغ" },
   arcade: { en: "Arcade", ar: "صالة ألعاب" },

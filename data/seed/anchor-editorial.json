@@ -1,0 +1,497 @@
+{
+  "historic-jeddah-al-balad": {
+    "subcategory": "district",
+    "descriptionEn": "Al-Balad is Jeddah's historic centre, known for its coral-stone houses with wooden roshan windows, and it was inscribed as a UNESCO World Heritage Site in 2014. The old city walls were torn down in the 1940s, but the quarter they once enclosed still holds the city's heritage and rewards an unhurried visit.",
+    "descriptionAr": "جدة التاريخية، المعروفة بـ«البلد»، هي المركز التاريخي للمدينة، وتشتهر ببيوتها المبنية من الحجر المنقبي ورواشينها الخشبية، وقد أُدرجت في قائمة التراث العالمي لليونسكو عام ٢٠١٤. ورغم هدم سور المدينة القديم في أربعينيات القرن الماضي، ما زال الحي الذي كان يحتضنه يحفظ إرث جدة، ويستحق زيارة على مهل.",
+    "tags": ["heritage", "architecture", "unesco", "history", "photography"],
+    "occasions": ["visitors", "family", "friends", "photos"],
+    "attributes": { "outdoor": true, "photoSpot": true },
+    "editorsPick": true
+  },
+  "nasseef-house": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Nasseef House is a historic house in Al-Balad, built between 1872 and 1881 for Omar Nasseef Effendi. King Abdulaziz used it as a residence after entering Jeddah in 1925. Today it serves as a cultural centre for exhibitions and lectures, which makes it a natural stop for anyone curious about the city's past.",
+    "descriptionAr": "بُني بيت نصيف في جدة التاريخية بين عامَي ١٨٧٢ و١٨٨١ لعمر نصيف أفندي، واتخذه الملك عبدالعزيز مقرًّا لإقامته بعد دخوله جدة عام ١٩٢٥. ويُستخدم البيت اليوم مركزًا ثقافيًا يحتضن المعارض والمحاضرات، فهو محطة طبيعية لكل من يرغب في التعرّف على ماضي المدينة.",
+    "tags": ["heritage", "architecture", "history", "exhibitions"],
+    "occasions": ["visitors", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": true
+  },
+  "matbouli-house-museum": {
+    "subcategory": "museum",
+    "descriptionEn": "Matbouli House Museum is a privately owned historic family house in Al-Balad, run as a small museum of household antiques. It sits near Souq Al-Alawi, so it fits easily into a walk through the old town's market lanes. Expect an intimate, domestic glimpse of the past rather than a large formal museum.",
+    "descriptionAr": "متحف بيت المتبولي بيتٌ عائلي تاريخي مملوك ملكية خاصة في جدة التاريخية، تحوّل إلى متحف صغير يعرض مقتنيات منزلية قديمة. يقع قرب سوق العلوي، فيسهل ضمّه إلى جولة بين أزقة الأسواق القديمة، ويقدّم لمحة حميمة عن الحياة المنزلية في الماضي بعيدًا عن أجواء المتاحف الكبيرة.",
+    "tags": ["museum", "heritage", "antiques", "history"],
+    "occasions": ["visitors"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "bab-makkah": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Bab Makkah is the gate on the eastern side of Jeddah's old city, named for the road to Makkah. The wall it belonged to was demolished in the 1940s, and the gate standing today is a reconstruction. It is a free-standing landmark beside a busy road and souq area, easy to take in on a visit to Al-Balad.",
+    "descriptionAr": "باب مكة هو البوابة الواقعة في الجهة الشرقية من جدة القديمة، وسُمّي بذلك نسبةً إلى الطريق المؤدي إلى مكة المكرمة. هُدم السور الذي كان جزءًا منه في أربعينيات القرن الماضي، والباب القائم اليوم أُعيد بناؤه، ويقف معلمًا مستقلًا بجوار طريق مزدحم ومنطقة أسواق، فيسهل المرور به خلال زيارة البلد.",
+    "tags": ["heritage", "landmark", "history", "gate"],
+    "occasions": ["visitors", "photos"],
+    "attributes": { "outdoor": true, "photoSpot": true },
+    "editorsPick": false
+  },
+  "bab-jadid": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Bab Jadid, whose name means 'New Gate', is one of the historic gates of Jeddah's old city wall, standing at the edge of Al-Balad. It marks one of the old ways into the historic town and makes an easy stop on a walk around the district.",
+    "descriptionAr": "باب الجديد واحد من الأبواب التاريخية لسور جدة القديم، ويقع على أطراف منطقة البلد. يدلّ على أحد المداخل القديمة إلى المدينة التاريخية، ويمكن ضمّه بسهولة إلى جولة سيرًا على الأقدام بين معالم الحي.",
+    "tags": ["heritage", "history", "gate"],
+    "occasions": ["visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "bab-sharif": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Bab Sharif is one of the historic gates of Jeddah's old city wall, standing at the edge of Al-Balad. Like the district's other gates, it marks a former way into the old town, and it is easy to take in while exploring the historic quarter on foot.",
+    "descriptionAr": "باب شريف أحد الأبواب التاريخية لسور جدة القديم، ويقع على أطراف منطقة البلد. وكغيره من أبواب المدينة القديمة، يشير إلى أحد المداخل السابقة إليها، ويسهل التوقف عنده أثناء التجوّل في الحي التاريخي سيرًا على الأقدام.",
+    "tags": ["heritage", "history", "gate"],
+    "occasions": ["visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "al-shafii-mosque": {
+    "subcategory": "mosque",
+    "descriptionEn": "Al-Shafi'i Mosque stands in the al-Mazloum quarter of Al-Balad and is regarded as the oldest mosque in Jeddah, generally dated to the 13th century. It reopened in 2015 after a three-year restoration. It remains an active place of worship, so visit outside prayer times and dress modestly.",
+    "descriptionAr": "يقع مسجد الشافعي في حارة المظلوم بجدة التاريخية، ويُعدّ أقدم مساجد جدة، إذ يُرجَّح أن تاريخه يعود إلى القرن الثالث عشر الميلادي. أُعيد افتتاحه عام ٢٠١٥ بعد أعمال ترميم استمرت ثلاث سنوات، وما زالت الصلوات تُقام فيه، لذا يُستحسن زيارته خارج أوقات الصلاة بلباس محتشم.",
+    "tags": ["mosque", "heritage", "history"],
+    "occasions": ["visitors"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "al-mimar-mosque": {
+    "subcategory": "mosque",
+    "descriptionEn": "Al-Mimar Mosque is a historic mosque on Souq Al-Alawi in Al-Balad, attributed by an inscription to the governor Mustafa Mimar Pasha, whose name it carries. You will pass it while walking the souq; as with any mosque, visitors should come outside prayer times and dress modestly.",
+    "descriptionAr": "مسجد المعمار مسجد تاريخي في سوق العلوي بجدة التاريخية، ينسبه نقشٌ فيه إلى الوالي مصطفى معمار باشا الذي يحمل اسمه. ستمرّ به أثناء تجوّلك في السوق، ومن آداب زيارة المساجد عمومًا تجنّب أوقات الصلاة والالتزام باللباس المحتشم.",
+    "tags": ["mosque", "heritage", "souq"],
+    "occasions": ["visitors"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "sharbatly-house": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Sharbatly House is a historic multi-storey house on Al-Mathaf Lane in Al-Balad, recognisable by its wooden roshan balconies. Its exterior is a landmark of the old town, but whether the interior is open to visitors hasn't been confirmed, so plan to admire it from the lane.",
+    "descriptionAr": "بيت الشربتلي منزل تاريخي متعدد الطوابق في زقاق المتحف بجدة التاريخية، تميّزه رواشينه الخشبية. وواجهته من معالم البلد القديمة، أما فتح داخله للزوار فلم يتأكد بعد، لذا خطّط للاستمتاع بمشاهدته من الخارج.",
+    "tags": ["heritage", "architecture", "roshan"],
+    "occasions": ["visitors", "photos"],
+    "attributes": { "outdoor": true, "photoSpot": true },
+    "editorsPick": false
+  },
+  "baeshen-house": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Baeshen House is listed among the most famous and oldest historic houses of Al-Balad, Jeddah's historic district. Whether its interior can be visited hasn't been verified, so for now think of it as a building to admire from the outside while you explore the old town's lanes.",
+    "descriptionAr": "يُعدّ بيت باعشن من أشهر بيوت البلد التاريخية وأقدمها في جدة. ولم يتسنَّ التحقق من إمكانية دخوله أو مواعيد زيارته، لذا يمكنك حاليًا الاكتفاء بمشاهدته من الخارج خلال جولتك في أزقة المنطقة القديمة.",
+    "tags": ["heritage", "architecture"],
+    "occasions": ["visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "red-sea-museum": {
+    "subcategory": "museum",
+    "descriptionEn": "The Red Sea Museum tells the story of the Red Sea's history and culture from inside the restored Bab Al-Bunt building in Historic Jeddah, originally built in 1866 as a sea gateway for pilgrims and travellers. It opened on 6 December 2025 with more than 1,000 objects across 23 galleries, making it a substantial stop on any visit to Al-Balad.",
+    "descriptionAr": "يروي متحف البحر الأحمر تاريخ البحر الأحمر وثقافته من داخل مبنى باب البنط المرمَّم في جدة التاريخية، الذي شُيّد عام ١٨٦٦ بوابةً بحرية يعبر منها الحجاج والمسافرون. افتُتح المتحف في ٦ ديسمبر ٢٠٢٥، ويضم أكثر من ألف قطعة موزعة على ٢٣ قاعة عرض، ما يجعله محطة ثرية في أي زيارة للبلد.",
+    "tags": ["museum", "heritage", "history", "maritime"],
+    "occasions": ["visitors", "family", "friends"],
+    "attributes": { "indoor": true },
+    "editorsPick": true
+  },
+  "teamlab-borderless-jeddah": {
+    "subcategory": "museum",
+    "descriptionEn": "teamLab Borderless Jeddah is the first teamLab Borderless digital-art museum in the Middle East, set on the banks of Al-Arbaeen Lagoon at Culture Square in Historic Jeddah. It opened in June 2024, and entry is ticketed through the official website. Its location makes it easy to combine with a walk through the old town.",
+    "descriptionAr": "تيم لاب بلا حدود جدة هو أول متحف للفن الرقمي من متاحف «تيم لاب بلا حدود» في الشرق الأوسط، ويقع على ضفاف بحيرة الأربعين في ساحة الثقافة بجدة التاريخية. افتُتح في يونيو ٢٠٢٤، والدخول بتذاكر تُباع عبر موقعه الرسمي، ويسهل الجمع بين زيارته وجولة في أرجاء البلد القديمة.",
+    "tags": ["art", "digital art", "museum", "family"],
+    "occasions": ["visitors", "family", "friends", "date"],
+    "attributes": { "indoor": true, "familyFriendly": true },
+    "editorsPick": true
+  },
+  "tariq-abdulhakim-center": {
+    "subcategory": "museum",
+    "descriptionEn": "The Tariq Abdulhakim Center is a museum and cultural centre in Al-Balad dedicated to the Saudi composer and musician Tariq Abdulhakim. It was inaugurated by the Museums Commission in December 2023, adding a music-focused stop to a heritage walk through the old town.",
+    "descriptionAr": "مركز طارق عبدالحكيم متحف ومركز ثقافي في جدة التاريخية، مخصّص للموسيقار والملحن السعودي طارق عبدالحكيم. دشّنته هيئة المتاحف في ديسمبر ٢٠٢٣، ليضيف إلى جولتك التراثية في البلد القديمة محطة تحتفي بالموسيقى.",
+    "tags": ["museum", "music", "culture", "heritage"],
+    "occasions": ["visitors"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "hayy-jameel": {
+    "subcategory": "cultural_center",
+    "descriptionEn": "Hayy Jameel is a multidisciplinary arts complex in Al-Mohammadiyah run by Art Jameel, which first opened to the public in December 2021. It brings together galleries, an independent cinema called Hayy Cinema, a library and studios, so it suits anyone drawn to art and film; check what's on before you go.",
+    "descriptionAr": "حي جميل مجمّع فني متعدد التخصصات في حي المحمدية تديره مؤسسة فن جميل، وقد فتح أبوابه للجمهور أول مرة في ديسمبر ٢٠٢١. يضم معارض فنية وسينما مستقلة باسم «سينما حي» ومكتبة واستوديوهات، فهو وجهة تناسب محبي الفنون والسينما، ويُستحسن الاطلاع على برنامجه قبل الزيارة.",
+    "tags": ["art", "cinema", "culture", "library", "gallery"],
+    "occasions": ["friends", "visitors"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "al-tayebat-international-city-museum": {
+    "subcategory": "museum",
+    "descriptionEn": "Al-Tayebat International City Museum, also known as the Abdul Raouf Khalil Museum, is a large private museum complex built in Hejazi style in Al-Faisaliyah by the collector Abdul Raouf Khalil. Construction began in 1987 and it opened in 1996, with collections on Saudi heritage, Islamic civilisation and world cultures. Its current opening status hasn't been confirmed, so check before visiting.",
+    "descriptionAr": "متحف عبد الرؤوف خليل، المعروف أيضًا بمتحف مدينة الطيبات العالمية، مجمّع متحفي خاص كبير شُيّد على الطراز الحجازي في حي الفيصلية، وأسسه جامع المقتنيات عبد الرؤوف خليل. بدأ بناؤه عام ١٩٨٧ وافتُتح عام ١٩٩٦، وتتنوع مقتنياته بين التراث السعودي والحضارة الإسلامية وثقافات العالم. لم نتمكن من التأكد من أنه يستقبل الزوار حاليًا، فتحقّق من ذلك قبل الزيارة.",
+    "tags": ["museum", "heritage", "history", "culture"],
+    "occasions": ["visitors", "family"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "house-of-islamic-arts": {
+    "subcategory": "museum",
+    "descriptionEn": "The House of Islamic Arts is a museum dedicated to Islamic art that describes itself as the first of its kind in Saudi Arabia. Its collection of more than 1,000 pieces spans 15 centuries, from ceramics, metalwork and coins to manuscripts and Kaaba textiles. You'll find it in Al-Aziziyah, within the Jeddah Park complex.",
+    "descriptionAr": "دار الفنون الإسلامية متحف متخصص في الفن الإسلامي، ويقدّم نفسه بوصفه الأول من نوعه في المملكة العربية السعودية. تضم مجموعته أكثر من ألف قطعة تمتد عبر ١٥ قرنًا، من الخزف والمشغولات المعدنية والعملات إلى المخطوطات ومنسوجات الكعبة المشرفة. ويقع في حي العزيزية داخل مجمّع جدة بارك.",
+    "tags": ["museum", "islamic art", "heritage", "history"],
+    "occasions": ["visitors", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": true
+  },
+  "khuzam-palace-jeddah-regional-museum": {
+    "subcategory": "historic_site",
+    "descriptionEn": "Khuzam Palace is a royal palace built between 1928 and 1932 for King Abdulaziz in Al-Nazlah Al-Yamaniyah. It houses the Jeddah Regional Museum of Archaeology and Ethnography, which opened in 1995. Current public opening times couldn't be confirmed, so check before you make the trip.",
+    "descriptionAr": "قصر خزام قصر ملكي شُيّد بين عامَي ١٩٢٨ و١٩٣٢ للملك عبدالعزيز في حي النزلة اليمانية، ويحتضن متحف جدة الإقليمي للآثار والتراث الشعبي الذي افتُتح عام ١٩٩٥. لم نتمكن من التأكد من مواعيد استقباله للزوار حاليًا، فتحقّق من ذلك قبل التوجه إليه.",
+    "tags": ["heritage", "history", "palace", "museum"],
+    "occasions": ["visitors"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "al-rahma-mosque": {
+    "subcategory": "mosque",
+    "descriptionEn": "Al-Rahma Mosque, also known as Fatima Al-Zahra Mosque, is built out over the sea on the North Corniche, which is why it is popularly called the 'floating mosque'. Established in 1985, it covers 2,400 square metres and is crowned by one main dome and 52 smaller outer domes. It is an active mosque, so visit outside prayer times and dress modestly.",
+    "descriptionAr": "مسجد الرحمة، ويُعرف أيضًا بمسجد فاطمة الزهراء، مُشيَّد فوق مياه البحر على الكورنيش الشمالي، ولذلك يُلقَّب شعبيًا بـ«المسجد العائم». أُنشئ عام ١٩٨٥ على مساحة ٢٤٠٠ متر مربع، وتعلوه قبة رئيسية و٥٢ قبة خارجية صغيرة. وهو مسجد تُقام فيه الصلوات، فاحرص على زيارته خارج أوقاتها بلباس محتشم.",
+    "tags": ["mosque", "seafront", "landmark", "architecture", "photography"],
+    "occasions": ["visitors", "family", "photos"],
+    "attributes": { "photoSpot": true },
+    "editorsPick": true
+  },
+  "king-fahds-fountain": {
+    "subcategory": "landmark",
+    "descriptionEn": "King Fahd's Fountain sends a jet of water up to 312 m into the air, and Guinness World Records lists it as the tallest fountain in the world. Built between 1980 and 1983, it stands offshore in the sea, so you watch it from the Al-Hamra (Middle) Corniche rather than visiting it up close.",
+    "descriptionAr": "تقذف نافورة الملك فهد مياهها إلى ارتفاع يصل إلى ٣١٢ مترًا، وتُدرجها موسوعة غينيس للأرقام القياسية بوصفها أعلى نافورة في العالم. شُيّدت بين عامَي ١٩٨٠ و١٩٨٣ في عرض البحر، لذا تُشاهَد من كورنيش الحمراء (الكورنيش الأوسط) لا من قُرب.",
+    "tags": ["landmark", "fountain", "seafront", "photography"],
+    "occasions": ["visitors", "family", "photos"],
+    "attributes": { "outdoor": true, "photoSpot": true },
+    "editorsPick": true
+  },
+  "jeddah-flagpole": {
+    "subcategory": "landmark",
+    "descriptionEn": "The Jeddah Flagpole at King Abdullah Square rises 171 m and was the world's tallest flagpole from its erection in 2014 until 2021. Its base sits in the middle of a roundabout, so it is a landmark to admire from a distance or while driving past rather than one to visit on foot.",
+    "descriptionAr": "ترتفع سارية جدة في ميدان الملك عبدالله إلى ١٧١ مترًا، وقد أُقيمت عام ٢٠١٤ وظلّت أطول سارية علم في العالم حتى عام ٢٠٢١. تقع قاعدتها وسط دوّار، لذا فهي معلم يُشاهَد من بعيد أو أثناء المرور بالسيارة، لا مكانٌ يُزار سيرًا على الأقدام.",
+    "tags": ["landmark", "flagpole"],
+    "occasions": ["visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "jeddah-waterfront": {
+    "subcategory": "waterfront",
+    "descriptionEn": "The Jeddah Waterfront, renamed ROSHN Waterfront under a 2022 sponsorship deal, is a redeveloped seafront promenade on the North Corniche. Opened in 2017, it stretches about 4 km along the sea, with recreation areas for families and children, making it an easy choice for a relaxed walk by the water.",
+    "descriptionAr": "واجهة روشن البحرية، المعروفة سابقًا بواجهة جدة البحرية، ممشى بحري أُعيد تطويره على الكورنيش الشمالي، وحمل اسمه الحالي بموجب اتفاقية رعاية عام ٢٠٢٢. افتُتح عام ٢٠١٧ ويمتد نحو ٤ كيلومترات بمحاذاة البحر، ويضم مناطق ترفيهية للعائلات والأطفال، فهو خيار سهل لنزهة هادئة على البحر.",
+    "tags": ["seafront", "promenade", "family", "kids", "walking"],
+    "occasions": ["family", "friends", "visitors"],
+    "attributes": { "outdoor": true, "familyFriendly": true },
+    "editorsPick": true
+  },
+  "middle-corniche-park": {
+    "subcategory": "park",
+    "descriptionEn": "Middle Corniche Park is a public seafront park on the Al-Hamra section of the Jeddah Corniche, the stretch from which King Fahd's Fountain is usually viewed. It is a natural place to pause by the sea and watch the fountain from the shore.",
+    "descriptionAr": "حديقة الكورنيش الأوسط حديقة عامة مطلة على البحر في قطاع الحمراء من كورنيش جدة، وهو الجزء الذي تُشاهَد منه نافورة الملك فهد عادةً. مكان مناسب للتوقف على شاطئ البحر ومتابعة النافورة من اليابسة.",
+    "tags": ["seafront", "park", "fountain", "family"],
+    "occasions": ["family", "friends", "visitors", "photos"],
+    "attributes": { "outdoor": true, "familyFriendly": true, "photoSpot": true },
+    "editorsPick": false
+  },
+  "obhur-creek": {
+    "subcategory": "waterfront",
+    "descriptionEn": "Obhur Creek, or Sharm Obhur, is a 9 km tidal creek north of central Jeddah: a former river valley flooded by the Red Sea and a popular spot for marinas and water sports. Much of the shoreline is taken up by private resorts and chalets, but there is a public promenade and beach on the south shore.",
+    "descriptionAr": "شرم أبحر ذراعٌ بحري يمتد ٩ كيلومترات شمال وسط جدة، وهو في الأصل وادٍ قديم غمرته مياه البحر الأحمر، ويُعدّ وجهة رائجة للمراسي والرياضات المائية. تشغل المنتجعات والشاليهات الخاصة كثيرًا من شواطئه، غير أن ضفته الجنوبية تضم ممشى وشاطئًا عامَّين.",
+    "tags": ["seafront", "water sports", "beach", "marina"],
+    "occasions": ["friends", "family", "visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": true
+  },
+  "al-arbaeen-lagoon": {
+    "subcategory": "waterfront",
+    "descriptionEn": "Al-Arbaeen Lagoon lies on the western edge of Historic Jeddah, and its banks hold Culture Square and teamLab Borderless Jeddah. With the old town on one side and these cultural venues on its shore, it is an easy open-air stop to fold into a day in Al-Balad.",
+    "descriptionAr": "تقع بحيرة الأربعين على الطرف الغربي من جدة التاريخية، وتحتضن ضفافها ساحة الثقافة وتيم لاب بلا حدود جدة. وبين البلد القديمة من جهة وهذه المعالم الثقافية على شاطئها من جهة أخرى، تمثّل محطة مفتوحة يسهل إضافتها إلى يوم تقضيه في البلد.",
+    "tags": ["lagoon", "culture", "outdoors"],
+    "occasions": ["visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "prince-majid-park": {
+    "subcategory": "park",
+    "descriptionEn": "Prince Majid Park is a large public park of about 130,000 square metres in central Jeddah, opposite Al-Handasa Square. It has a walking track, a cycle path and a big children's play area, and the municipality's project won a Landscape Middle East 2025 award for community impact. It reopened after redevelopment in 2024.",
+    "descriptionAr": "حديقة الأمير ماجد حديقة عامة واسعة تبلغ مساحتها نحو ١٣٠ ألف متر مربع في وسط جدة، مقابل ميدان الهندسة. تضم مسارًا للمشي وآخر للدراجات ومنطقة ألعاب كبيرة للأطفال، وقد نال مشروع أمانة جدة جائزة «لاندسكيب الشرق الأوسط» لعام ٢٠٢٥ عن الأثر المجتمعي، وأُعيد افتتاحها بعد تطويرها عام ٢٠٢٤.",
+    "tags": ["park", "kids", "walking", "cycling", "family"],
+    "occasions": ["family", "friends"],
+    "attributes": { "outdoor": true, "familyFriendly": true },
+    "editorsPick": false
+  },
+  "jeddah-yacht-club": {
+    "subcategory": "marina",
+    "descriptionEn": "Jeddah Yacht Club & Marina is a waterfront development on the North Corniche, next to the Corniche Circuit. It combines a private members' yacht club, a marina, the Marina Walk dining promenade and The Jeddah EDITION hotel. The club itself is members-only, so for most visitors Marina Walk is the part to head for.",
+    "descriptionAr": "نادي جدة لليخوت والمرسى مشروع على الكورنيش الشمالي بجوار حلبة كورنيش جدة، يجمع بين نادٍ خاص لليخوت مقتصر على الأعضاء، ومرسى للقوارب، وممشى «مارينا ووك» للمطاعم، وفندق «ذا جدة إديشن». ولأن النادي للأعضاء فقط، فإن ممشى المارينا هو الوجهة المتاحة لعامة الزوار.",
+    "tags": ["marina", "dining", "seafront", "yachts"],
+    "occasions": ["friends", "date", "visitors"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "al-shallal-theme-park": {
+    "subcategory": "theme_park",
+    "descriptionEn": "Al-Shallal Theme Park is an amusement park on the Corniche in Ash-Shati, opened in 2004. Its central building houses an ice-skating rink, and its rides have included a Boomerang roller coaster, a Wild Mouse coaster and a log flume, though the line-up may have changed since.",
+    "descriptionAr": "ملاهي الشلال مدينة ألعاب على الكورنيش في حي الشاطئ، افتُتحت عام ٢٠٠٤. يضم مبناها الرئيسي حلبة للتزلج على الجليد، ومن الألعاب التي عُرفت بها أفعوانية «بوميرانغ» وأفعوانية «وايلد ماوس» ولعبة القوارب المائية، وإن كانت قائمة الألعاب قد تغيّرت منذ ذلك الحين.",
+    "tags": ["rides", "family", "kids", "ice skating"],
+    "occasions": ["family", "friends"],
+    "attributes": { "familyFriendly": true },
+    "editorsPick": false
+  },
+  "fakieh-aquarium": {
+    "subcategory": "aquarium",
+    "descriptionEn": "Fakieh Aquarium is a public aquarium on the Corniche, right next to Al-Shallal Theme Park. Highlights include an underwater tunnel and a dolphin show, along with sea lions, penguins and sand sharks. Tickets are sold on its official website, and a visit pairs naturally with a family day out along the Corniche.",
+    "descriptionAr": "فقيه أكواريوم حوض أحياء مائية عام على الكورنيش بجوار ملاهي الشلال، ومن أبرز ما فيه نفق تحت الماء وعرض للدلافين، إلى جانب أسود البحر والبطاريق وأسماك قرش الرمل. تُباع التذاكر عبر موقعه الرسمي، وتتكامل زيارته بسهولة مع نزهة عائلية على الكورنيش.",
+    "tags": ["aquarium", "marine life", "dolphins", "kids", "family"],
+    "occasions": ["family", "visitors", "friends"],
+    "attributes": { "indoor": true, "familyFriendly": true },
+    "editorsPick": true
+  },
+  "kidzania-jeddah": {
+    "subcategory": "theme_park",
+    "descriptionEn": "KidZania Jeddah was set up as an indoor role-play 'city' for children inside Mall of Arabia, opening in January 2015 as Saudi Arabia's first KidZania. Its current operation hasn't been confirmed, so check that it is open before planning a visit around it.",
+    "descriptionAr": "أُنشئت كيدزانيا جدة مدينةً مصغّرة مغلقة داخل مول العرب يمارس فيها الأطفال لعب الأدوار، وافتُتحت في يناير ٢٠١٥ بوصفها أول كيدزانيا في المملكة. لم نتمكن من التأكد من استمرار تشغيلها حاليًا، لذا تحقّق من ذلك قبل التخطيط للزيارة.",
+    "tags": ["kids", "family", "role play"],
+    "occasions": ["family"],
+    "attributes": { "indoor": true, "familyFriendly": true },
+    "editorsPick": false
+  },
+  "cyan-waterpark": {
+    "subcategory": "water_park",
+    "descriptionEn": "Cyan Waterpark is an outdoor water park in north Jeddah, in the Al-Manarat and Al-Buhayrat area. Tickets are sold online, so you can sort out entry before you arrive. It is a straightforward option for a day of splashing around with family or friends.",
+    "descriptionAr": "سيان واتربارك حديقة مائية مكشوفة في شمال جدة، في منطقة المنارات والبحيرات. تُباع تذاكرها عبر الإنترنت، فيمكنك ترتيب دخولك قبل الوصول، وهي خيار مناسب لقضاء وقت ممتع في الماء مع العائلة أو الأصدقاء.",
+    "tags": ["water park", "family", "outdoors", "adventure"],
+    "occasions": ["family", "friends"],
+    "attributes": { "outdoor": true, "familyFriendly": true },
+    "editorsPick": false
+  },
+  "jeddah-superdome": {
+    "subcategory": "venue",
+    "descriptionEn": "Jeddah Superdome is a domed event venue on Madinah Road that opened in June 2021. At 210 m in diameter and 46 m high, it was recorded as the world's largest continuous dome. It hosts events and exhibitions and is only open when something is on, so check the programme before you go.",
+    "descriptionAr": "جدة سوبر دوم مكان فعاليات مقبّب على طريق المدينة المنورة، افتُتح في يونيو ٢٠٢١. يبلغ قطره ٢١٠ أمتار وارتفاعه ٤٦ مترًا، وقد سُجّل بوصفه أكبر قبة متصلة في العالم. يستضيف الفعاليات والمعارض ولا يفتح أبوابه إلا خلالها، فاطّلع على جدول الفعاليات قبل الذهاب.",
+    "tags": ["events", "exhibitions", "venue", "architecture"],
+    "occasions": ["friends"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "king-abdullah-sports-city": {
+    "subcategory": "stadium_arena",
+    "descriptionEn": "King Abdullah Sports City is a sports complex about 30 km north of central Jeddah, centred on a stadium of roughly 62,000 seats nicknamed 'The Shining Jewel' (Al-Jawhara). The stadium opened on 1 May 2014 and hosted matches of the 2023 FIFA Club World Cup. Access is on match and event days only.",
+    "descriptionAr": "مدينة الملك عبدالله الرياضية مجمّع رياضي على بُعد نحو ٣٠ كيلومترًا شمال وسط جدة، ويضم ملعبًا يتسع لقرابة ٦٢ ألف متفرج يُلقّب بـ«الجوهرة المشعة». افتُتح الملعب في ١ مايو ٢٠١٤، واستضاف مباريات من كأس العالم للأندية ٢٠٢٣، ولا يُتاح دخوله إلا في أيام المباريات والفعاليات.",
+    "tags": ["football", "stadium", "sports", "events"],
+    "occasions": ["friends"],
+    "attributes": { "groups": true },
+    "editorsPick": false
+  },
+  "prince-abdullah-al-faisal-sports-city": {
+    "subcategory": "stadium_arena",
+    "descriptionEn": "Prince Abdullah Al-Faisal Sports City is a stadium built in 1970 in the Al-Waziriyah area of south-east Jeddah, with a capacity of about 27,000. It is used by Al-Ittihad and Al-Ahli, and access is on match days only, so check the fixtures before heading over.",
+    "descriptionAr": "مدينة الأمير عبد الله الفيصل الرياضية ملعب شُيّد عام ١٩٧٠ في حي الوزيرية جنوب شرق جدة، ويتسع لنحو ٢٧ ألف متفرج. يستخدمه ناديا الاتحاد والأهلي، ولا يُتاح دخوله إلا في أيام المباريات، فراجع جدول المباريات قبل التوجه إليه.",
+    "tags": ["football", "stadium", "sports"],
+    "occasions": ["friends"],
+    "attributes": { "groups": true },
+    "editorsPick": false
+  },
+  "jeddah-corniche-circuit": {
+    "subcategory": "race_track",
+    "descriptionEn": "Jeddah Corniche Circuit is a 6.174 km street circuit with 27 turns, running along the Corniche beside the Red Sea. It hosted the first Formula One Saudi Arabian Grand Prix in December 2021 and has hosted the Formula E Jeddah ePrix since 2025. The public can only get in during events, so check the official schedule first.",
+    "descriptionAr": "حلبة كورنيش جدة حلبة شوارع يبلغ طولها ٦٫١٧٤ كيلومترات وتضم ٢٧ منعطفًا، وتمتد على الكورنيش بمحاذاة البحر الأحمر. استضافت أول سباق لجائزة السعودية الكبرى للفورمولا ١ في ديسمبر ٢٠٢١، وتستضيف سباق جدة للفورمولا إي منذ عام ٢٠٢٥. ولا يُسمح بدخول الجمهور إلا خلال الفعاليات، فراجع الجدول الرسمي أولًا.",
+    "tags": ["motorsport", "formula one", "racing", "events"],
+    "occasions": ["friends"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "vox-cinemas-red-sea-mall": {
+    "subcategory": "movie_theater",
+    "descriptionEn": "VOX Cinemas Red Sea Mall is a multiplex inside Red Sea Mall that opened in early 2019 with 12 screens, including an IMAX auditorium. It is a handy choice for catching a film on the big screen, and easy to combine with some shopping at the mall.",
+    "descriptionAr": "ڤوكس سينما في رد سي مول مجمّع سينمائي افتُتح مطلع عام ٢٠١٩ بـ١٢ شاشة، من بينها قاعة IMAX. خيار عملي لمشاهدة الأفلام على الشاشة الكبيرة، ويسهل الجمع بينه وبين جولة تسوّق في المول.",
+    "tags": ["cinema", "movies", "imax"],
+    "occasions": ["friends", "date", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "vox-cinemas-jeddah-park": {
+    "subcategory": "movie_theater",
+    "descriptionEn": "VOX Cinemas Jeddah Park is a 13-screen multiplex in the Jeddah Park complex that opened in June 2024. Its screens include IMAX with Laser and GOLD auditoriums, giving you a choice of formats for a trip to the movies, with the rest of the complex right on hand.",
+    "descriptionAr": "فوكس سينما في جدة بارك مجمّع سينمائي من ١٣ شاشة افتُتح في يونيو ٢٠٢٤، ومن بين قاعاته قاعة IMAX بتقنية الليزر وقاعات GOLD، ما يمنحك خيارات متعددة لمشاهدة الأفلام، مع بقية مرافق المجمّع على مقربة منك.",
+    "tags": ["cinema", "movies", "imax"],
+    "occasions": ["friends", "date", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "muvi-cinemas-mall-of-arabia": {
+    "subcategory": "movie_theater",
+    "descriptionEn": "Muvi Cinemas at Mall of Arabia was the very first Muvi Cinemas location, inaugurated in August 2019. It opened with 15 screens, including ScreenX, so there is plenty of choice whether you are planning a family outing or a night out with friends.",
+    "descriptionAr": "موڤي سينما في مول العرب هو أول فرع افتتحته موڤي سينما، وكان ذلك في أغسطس ٢٠١٩ بـ١٥ شاشة من بينها شاشة ScreenX، فتجد فيه خيارات واسعة سواء خرجت مع العائلة أو مع الأصدقاء.",
+    "tags": ["cinema", "movies", "screenx"],
+    "occasions": ["friends", "date", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "amc-cinemas-stars-avenue": {
+    "subcategory": "movie_theater",
+    "descriptionEn": "AMC Cinemas Stars Avenue is a nine-screen cinema in Stars Avenue Mall and was AMC's first in Jeddah when it opened in 2021. It includes an IMAX with Laser auditorium, making it a good option for big releases, and you can easily pair a film with time in the mall.",
+    "descriptionAr": "سينما AMC في ستارز افينيو مول تضم تسع شاشات، وكانت أول صالة لـAMC في جدة عند افتتاحها عام ٢٠٢١. وتشمل قاعة IMAX بتقنية الليزر، فهي خيار مناسب لمشاهدة الأفلام الكبرى، مع إمكانية قضاء بعض الوقت في المول قبل العرض أو بعده.",
+    "tags": ["cinema", "movies", "imax"],
+    "occasions": ["friends", "date", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "transition-escape": {
+    "subcategory": "escape_room",
+    "descriptionEn": "Transition Escape is an escape-room venue in Al-Salamah. Escape rooms are made for small groups who enjoy solving puzzles together, which makes this a fun pick for an outing with friends who like a challenge and a bit of teamwork.",
+    "descriptionAr": "«هروب الإنتقال» مكان لألعاب غرف الهروب في حي السلامة. وتقوم هذه الألعاب على تعاون مجموعة صغيرة في حل الألغاز معًا، لذا فهو خيار ممتع للخروج مع أصدقاء يحبون التحدي والعمل بروح الفريق.",
+    "tags": ["escape room", "puzzles", "games", "groups"],
+    "occasions": ["friends"],
+    "attributes": { "indoor": true, "groups": true },
+    "editorsPick": false
+  },
+  "souq-al-alawi": {
+    "subcategory": "souq",
+    "descriptionEn": "Souq Al-Alawi is one of the oldest markets in Historic Jeddah, running between Qabil Street and Souq Al-Badu. It is known for its attar, spice and perfume sellers, and the historic Nasseef House and Matbouli House both overlook it. As a pedestrian street, it is made for wandering on foot.",
+    "descriptionAr": "سوق العلوي من أقدم أسواق جدة التاريخية، ويمتد بين شارع قابل وسوق البدو. يشتهر بباعة العطارة والتوابل والعطور، ويطل عليه بيتا نصيف والمتبولي التاريخيان. وهو شارع مخصّص للمشاة، فتجوّل فيه على مهل.",
+    "tags": ["souq", "shopping", "heritage", "spices", "perfume"],
+    "occasions": ["visitors", "friends", "family"],
+    "attributes": { "outdoor": true },
+    "editorsPick": true
+  },
+  "souq-qabil": {
+    "subcategory": "souq",
+    "descriptionEn": "Souq Qabil is a historic market street in Al-Balad, established in the early 1900s and named after the merchant Suliman Qabil, who bought it in 1925-26. Its shops sell spices, household goods, perfumes and jewellery, and as a pedestrian street it is an easy place to browse on foot.",
+    "descriptionAr": "سوق قابل شارع تجاري تاريخي في جدة التاريخية، نشأ في مطلع القرن العشرين وحمل اسم التاجر سليمان قابل الذي اشتراه بين عامَي ١٩٢٥ و١٩٢٦. تبيع محلاته التوابل والأدوات المنزلية والعطور والمجوهرات، وهو شارع للمشاة يسهل التجوّل فيه والتسوق على مهل.",
+    "tags": ["souq", "shopping", "heritage", "spices", "jewellery"],
+    "occasions": ["visitors", "friends"],
+    "attributes": { "outdoor": true },
+    "editorsPick": false
+  },
+  "red-sea-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Red Sea Mall is a shopping mall on King Abdulaziz Road in Al-Shatee, opened in 2008. Alongside its shops it houses a VOX Cinemas multiplex, so it works well when you want to combine a shopping trip with a film in one visit.",
+    "descriptionAr": "رد سي مول مركز تسوق على طريق الملك عبدالعزيز في حي الشاطئ، افتُتح عام ٢٠٠٨. وإلى جانب متاجره يضم مجمّع ڤوكس السينمائي، فيمكنك الجمع بين التسوق ومشاهدة فيلم في زيارة واحدة.",
+    "tags": ["shopping", "mall", "cinema"],
+    "occasions": ["friends", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "mall-of-arabia": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Mall of Arabia is a shopping mall in Al-Nuzha that opened in October 2008. As well as its shops, it is home to the very first Muvi Cinemas, which makes it an easy place to round off a shopping trip with a film.",
+    "descriptionAr": "مول العرب مركز تسوق في حي النزهة افتُتح في أكتوبر ٢٠٠٨. وإلى جانب متاجره يضم أول فرع لموڤي سينما، فيسهل أن تختم جولة التسوق فيه بمشاهدة فيلم.",
+    "tags": ["shopping", "mall", "cinema", "family"],
+    "occasions": ["family", "friends"],
+    "attributes": { "indoor": true, "familyFriendly": true },
+    "editorsPick": false
+  },
+  "al-andalus-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Al-Andalus Mall is a shopping mall on Prince Majid Road in the Al-Faiha'a district. It offers indoor shopping for anyone in this part of Jeddah; check its current stores and opening hours before making a special trip.",
+    "descriptionAr": "الأندلس مول مركز تسوق على طريق الأمير ماجد في حي الفيحاء، يوفّر خيارًا للتسوق في مكان مغلق لمن يكون في هذا الجزء من جدة. ويُستحسن التأكد من المتاجر الموجودة ومواعيد العمل الحالية قبل التوجه إليه خصيصًا.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "roshan-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Roshan Mall is a shopping mall on Al Salam Street in the Al-Shatee district. It makes a convenient indoor shopping stop if you are already nearby, and it is worth checking which stores are currently open before you make a dedicated trip.",
+    "descriptionAr": "روشان مول مركز تسوق على شارع السلام في حي الشاطئ، ويُعدّ محطة تسوق داخلية مناسبة لمن يكون في الجوار. ويُستحسن التحقق من المتاجر المفتوحة حاليًا قبل التوجه إليه خصيصًا.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "stars-avenue-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Stars Avenue Mall is a shopping mall in the Al-Zahra district and home to AMC Cinemas' nine-screen Jeddah cinema. That makes it a handy choice when you want to pair a bit of shopping with a film, all in the same indoor trip.",
+    "descriptionAr": "ستارز افينيو مول مركز تسوق في حي الزهراء، ويضم صالة سينما AMC ذات الشاشات التسع في جدة، ما يجعله خيارًا عمليًا للجمع بين التسوق ومشاهدة فيلم في مشوار واحد.",
+    "tags": ["shopping", "mall", "cinema"],
+    "occasions": ["friends"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "serafi-mega-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Serafi Mega Mall is a four-level shopping mall in Al-Faisaliyah that opened on 18 May 2005. With several floors of shops under one roof, it is a practical indoor stop for a shopping run in this part of the city.",
+    "descriptionAr": "صيرفي ميقا مول مركز تسوق من أربعة طوابق في حي الفيصلية، افتُتح في ١٨ مايو ٢٠٠٥. ويوفّر بطوابقه المتعددة خيارًا عمليًا للتسوق في مكان مغلق لمن يكون في هذا الجزء من المدينة.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "aziz-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Aziz Mall is a shopping mall in the Al-Faisaliyah district of Jeddah, offering indoor shopping for anyone in the neighbourhood. If you are planning a special trip, it is worth checking which stores are currently open and the mall's hours before you set off.",
+    "descriptionAr": "عزيز مول مركز تسوق في حي الفيصلية بجدة، يوفّر خيارًا للتسوق في مكان مغلق لسكان الحي وزواره. وإن كنت تخطط لزيارة خاصة، فمن الأفضل التحقق من المتاجر المفتوحة حاليًا ومواعيد عمل المول قبل الانطلاق.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "al-salaam-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Al Salaam Mall is a shopping mall on Prince Majid Road in Al-Faiha'a, close to Al-Andalus Mall. With two malls near each other on the same road, it is easy to cover both in one shopping trip; check current stores and hours before you go.",
+    "descriptionAr": "السلام مول مركز تسوق على طريق الأمير ماجد في حي الفيحاء، بالقرب من الأندلس مول. ولقرب المولين من بعضهما على الطريق نفسه، يسهل الجمع بينهما في مشوار تسوق واحد، مع التحقق من المتاجر ومواعيد العمل الحالية قبل الذهاب.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "al-yasmin-mall": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Al Yasmin Mall is a shopping mall in the Al-Manar district operated by Cenomi Centers. It is a practical indoor option for shopping in this part of Jeddah, whether you are running errands or just browsing the stores with family or friends.",
+    "descriptionAr": "الياسمين مول مركز تسوق في حي المنار تديره شركة سينومي سنترز، ويوفّر خيارًا عمليًا للتسوق في مكان مغلق في هذا الجزء من جدة، سواء لقضاء الحاجات أو للتجوّل بين المتاجر مع العائلة أو الأصدقاء.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  },
+  "the-village": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "The Village is a shopping centre on Al Harameen Road in north Jeddah, convenient if you are travelling along this side of the city. Check what is currently open before making a dedicated trip, as the line-up of stores can change.",
+    "descriptionAr": "ذا فيلج مركز تسوق على طريق الحرمين في شمال جدة، ومناسب لمن يمرّ بهذا الجانب من المدينة. ويُستحسن التحقق من المتاجر المفتوحة حاليًا قبل التوجه إليه خصيصًا، إذ قد تتغيّر المحلات من وقت لآخر.",
+    "tags": ["shopping", "mall"],
+    "occasions": [],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "jeddah-park": {
+    "subcategory": "shopping_mall",
+    "descriptionEn": "Despite its name, Jeddah Park is not a green park but a retail and entertainment complex on King Fahd Road in Al-Aziziyah. It houses a 13-screen VOX cinema that opened in 2024, so it suits an outing that mixes shopping with a film.",
+    "descriptionAr": "على خلاف ما يوحي به اسمه، ليس جدة بارك حديقة عامة، بل مجمّع للتسوق والترفيه على طريق الملك فهد في حي العزيزية. ويضم صالة فوكس سينما من ١٣ شاشة افتُتحت عام ٢٠٢٤، فهو مناسب لمشوار يجمع بين التسوق ومشاهدة فيلم.",
+    "tags": ["shopping", "cinema", "entertainment", "family"],
+    "occasions": ["family", "friends"],
+    "attributes": { "familyFriendly": true },
+    "editorsPick": false
+  },
+  "tahlia-street": {
+    "subcategory": "shopping_street",
+    "descriptionEn": "Tahlia Street, officially Prince Mohammed bin Abdulaziz Street, is a fashion and shopping street in mid-town Jeddah lined with designer boutiques and upscale department stores. The street is long, so pick a stretch to explore rather than trying to cover it all in one go.",
+    "descriptionAr": "شارع التحلية، واسمه الرسمي شارع الأمير محمد بن عبدالعزيز، شارع للأزياء والتسوق في وسط جدة، تصطف على جانبيه بوتيكات المصممين والمتاجر الراقية متعددة الأقسام. ولأن الشارع طويل، اختر جزءًا منه لتستكشفه بدلًا من محاولة قطعه كله دفعة واحدة.",
+    "tags": ["shopping", "fashion", "boutiques"],
+    "occasions": ["friends"],
+    "attributes": {},
+    "editorsPick": false
+  },
+  "king-saud-mosque": {
+    "subcategory": "mosque",
+    "descriptionEn": "King Saud Mosque in Al-Sharafiyah was designed by the architect Abdel-Wahed El-Wakil and completed in 1987. Its main dome rises 42 m and its minaret 60 m, which makes it a draw for anyone interested in architecture. It is an active mosque, so visit outside prayer times and dress modestly.",
+    "descriptionAr": "صمّم مسجدَ الملك سعود في حي الشرفية المعماريُّ عبد الواحد الوكيل، واكتمل بناؤه عام ١٩٨٧. ترتفع قبته الرئيسية ٤٢ مترًا ومئذنته ٦٠ مترًا، ما يجعله وجهة لمحبي فن العمارة. وهو مسجد تُقام فيه الصلوات، لذا يُستحسن زيارته خارج أوقاتها بلباس محتشم.",
+    "tags": ["mosque", "architecture", "landmark"],
+    "occasions": ["visitors"],
+    "attributes": {},
+    "editorsPick": true
+  },
+  "muvi-cinemas-ar-ruwais": {
+    "subcategory": "movie_theater",
+    "descriptionEn": "This Muvi Cinemas location in the Ar-Ruwais district has nine screens, offering a nearby choice of films for anyone in this part of the city. Check the Muvi Cinemas listings to see what is playing and the current showtimes before heading over.",
+    "descriptionAr": "يضم فرع موڤي سينما في حي الرويس تسع شاشات، ويوفّر خيارًا قريبًا لمشاهدة الأفلام لمن يكون في هذا الجزء من المدينة. راجع قوائم عروض موڤي سينما لمعرفة الأفلام المعروضة ومواعيدها قبل التوجه إليه.",
+    "tags": ["cinema", "movies"],
+    "occasions": ["friends", "family"],
+    "attributes": { "indoor": true },
+    "editorsPick": false
+  }
+}
