@@ -259,7 +259,8 @@ function sourceUrls(facts: string): string[] {
 function coordLabel(coordSource: string): string {
   const [kind, ref] = coordSource.split(":");
   const name = kind === "osm" ? "OpenStreetMap" : kind === "wikidata" ? "Wikidata" : kind === "overture" ? "Overture Maps" : kind;
-  return `${name} (${ref})`;
+  // Overture ids mean nothing to readers; OSM and Wikidata references can be looked up.
+  return kind === "overture" ? name : `${name} (${ref})`;
 }
 
 async function toWebp(src: string, dest: string): Promise<{ width: number; height: number }> {

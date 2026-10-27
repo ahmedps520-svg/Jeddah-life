@@ -91,6 +91,11 @@ export default async function PlacePage({ params }: PageProps<"/[lang]/place/[sl
   const attrs = (Object.entries(place.attributes ?? {}) as [keyof PlaceAttributes, { value: boolean | null; source: string }][]).filter(
     ([k, a]) => a?.value === true && k !== "wheelchair",
   );
+  // Editorial research records "Location: <source> · Sources: <urls>".
+  const sources = {
+    location: place.sourceDetail?.match(/^Location: ([^·]+?)(?: ·|$)/)?.[1] ?? null,
+    links: (place.sourceDetail?.match(/https?:\/\/\S+/g) ?? []).filter((u) => URL.canParse(u)).slice(0, 4),
+  };
   const sourceLine =
     place.source === "editorial"
       ? t.place.sourceEditorial
@@ -410,10 +415,24 @@ export default async function PlacePage({ params }: PageProps<"/[lang]/place/[sl
           <div className="space-y-2 rounded-2xl bg-sand-200/60 p-5 text-sm text-ink-600">
             <h2 className="font-semibold text-ink-800">{t.place.dataSource}</h2>
             <p>{sourceLine}</p>
+            {place.source === "editorial" && sources.location && <p>{t.place.locationFrom.replace("{source}", sources.location)}</p>}
+            {place.source === "editorial" && sources.links.length > 0 && (
+              <p>
+                {t.place.sourcesLabel}{" "}
+                {sources.links.map((u, i) => (
+                  <span key={u}>
+                    {i > 0 && ", "}
+                    <a href={u} target="_blank" rel="noreferrer noopener" className="text-sea-700 underline-offset-2 hover:underline" dir="ltr">
+                      {new URL(u).hostname.replace(/^www\./, "")}
+                    </a>
+                  </span>
+                ))}
+              </p>
+            )}
             {place.verification === "verified" && place.lastVerifiedAt ? (
               <p>{t.place.verifiedOn.replace("{date}", formatDateTime(locale, place.lastVerifiedAt))}</p>
             ) : (
-              <p>{t.place.notVerifiedNote}</p>
+              <p>{place.source === "editorial" ? t.place.editorialUnconfirmed : t.place.notVerifiedNote}</p>
             )}
             <p className="text-xs text-ink-500">{t.common.lastUpdated.replace("{date}", formatDateTime(locale, place.updatedAt))}</p>
             <ReportButton targetType="place" targetId={place.id} label={t.place.report} />

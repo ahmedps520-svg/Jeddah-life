@@ -232,6 +232,9 @@ async function main() {
   const anchorRows: NewPlace[] = anchors.map((a) => {
     const attrs = inferAttributes(a.category, a.subcategory, a.secondaryCategories ?? []);
     for (const [k, v] of Object.entries(a.attributes ?? {})) attrs[k as keyof PlaceAttributes] = { value: v, source: "verified" };
+    // Researched indoor/outdoor beats the guess from the type of place.
+    if (a.attributes?.indoor && !a.attributes.outdoor && attrs.outdoor?.source === "category") delete attrs.outdoor;
+    if (a.attributes?.outdoor && !a.attributes.indoor && attrs.indoor?.source === "category") delete attrs.indoor;
     if (a.wheelchair) attrs.wheelchair = { value: a.wheelchair !== "no", source: "osm" };
     if (a.fee === "no" || a.public) attrs.free = { value: true, source: a.fee === "no" ? "osm" : "verified" };
     if (a.fee === "yes") attrs.free = { value: false, source: "osm" };
