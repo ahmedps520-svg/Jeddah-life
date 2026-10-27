@@ -5,7 +5,7 @@ import sharp from "sharp";
 import { newId } from "@/lib/auth/password";
 import { HttpError } from "@/lib/api";
 
-export const UPLOAD_DIR = path.resolve(process.env.UPLOAD_DIR || "./data/uploads");
+export const UPLOAD_DIR = path.resolve(/*turbopackIgnore: true*/ process.env.UPLOAD_DIR || "./data/uploads");
 const MAX_BYTES = 4 * 1024 * 1024;
 
 function sniff(buf: Buffer): "jpeg" | "png" | "webp" | null {
@@ -35,8 +35,8 @@ export async function saveImage(file: File, folder: "reviews" | "submissions" | 
     throw new HttpError(415, "unreadable_image");
   }
   const name = `${newId()}.webp`;
-  const dir = path.join(UPLOAD_DIR, folder);
+  const dir = path.join(/*turbopackIgnore: true*/ UPLOAD_DIR, folder);
   await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, name), out.data);
+  await writeFile(path.join(/*turbopackIgnore: true*/ dir, name), out.data);
   return { url: `/uploads/${folder}/${name}`, width: out.info.width, height: out.info.height };
 }
