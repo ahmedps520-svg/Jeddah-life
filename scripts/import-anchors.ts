@@ -253,7 +253,13 @@ function inPolygon(lng: number, lat: number, poly: Polygon): boolean {
 }
 
 function sourceUrls(facts: string): string[] {
-  return [...new Set(facts.match(/https?:\/\/[^\s,;)]+/g) ?? [])].map((u) => u.replace(/[.]$/, ""));
+  const urls = (facts.match(/https?:\/\/[^\s,;]+/g) ?? []).map((u) => {
+    let url = u.replace(/[.]+$/, "");
+    // Keep balanced parentheses (Wikipedia titles), drop a closing one that ends the sentence.
+    while (url.endsWith(")") && (url.match(/\)/g) ?? []).length > (url.match(/\(/g) ?? []).length) url = url.slice(0, -1);
+    return url;
+  });
+  return [...new Set(urls)];
 }
 
 function coordLabel(coordSource: string): string {

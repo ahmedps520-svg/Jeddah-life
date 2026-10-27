@@ -375,6 +375,11 @@ async function main() {
                     secondaryCategories: row.secondaryCategories,
                     category: row.category,
                     subcategory: row.subcategory,
+                    hoursSource: row.hoursSource,
+                    sourceRef: row.sourceRef,
+                    sourceDetail: row.sourceDetail,
+                    verification: row.verification,
+                    lastVerifiedAt: row.lastVerifiedAt,
                   }
                 : {}),
               updatedAt: new Date(),
