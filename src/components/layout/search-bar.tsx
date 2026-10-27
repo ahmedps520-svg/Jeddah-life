@@ -37,7 +37,6 @@ export function SearchBar({ size = "md", autoFocus = false, initial }: { size?: 
   const listId = useId();
   const wrap = useRef<HTMLDivElement>(null);
 
-  useEffect(() => setRecent(readRecent()), [focused]);
   useEffect(() => {
     if (!focused || popular) return;
     fetch(`/api/search/popular?locale=${locale}`)
@@ -48,10 +47,7 @@ export function SearchBar({ size = "md", autoFocus = false, initial }: { size?: 
 
   useEffect(() => {
     const q = value.trim();
-    if (q.length < 2) {
-      setSuggestions([]);
-      return;
-    }
+    if (q.length < 2) return;
     const ctrl = new AbortController();
     const id = setTimeout(() => {
       fetch(`/api/search/suggest?q=${encodeURIComponent(q)}&locale=${locale}`, { signal: ctrl.signal })
@@ -139,7 +135,10 @@ export function SearchBar({ size = "md", autoFocus = false, initial }: { size?: 
             setValue(e.target.value);
             setActive(-1);
           }}
-          onFocus={() => setFocused(true)}
+          onFocus={() => {
+            setRecent(readRecent());
+            setFocused(true);
+          }}
           onKeyDown={(e) => {
             if (e.key === "ArrowDown") {
               e.preventDefault();

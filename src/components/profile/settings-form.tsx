@@ -223,6 +223,8 @@ export function SettingsForm({ init }: { init: SettingsInit }) {
       <section className={card}>
         <InstallApp />
         <div className="flex flex-wrap gap-3 border-t border-sand-200 pt-4">
+          {/* A file download from an API route, not page navigation. */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a href="/api/me/export" className="inline-flex h-11 items-center gap-2 rounded-full px-5 ring-1 ring-sand-300 hover:bg-sand-100">
             <Download className="size-4" /> {t.profile.exportData}
           </a>
@@ -256,6 +258,8 @@ export function SettingsForm({ init }: { init: SettingsInit }) {
             });
             if (res.ok) {
               toast(t.profile.deleted);
+              // Full reload so every part of the app forgets the deleted account.
+              // eslint-disable-next-line @next/next/no-location-assign-relative-destination
               window.location.assign(`/${locale}`);
             } else toast(t.common.somethingWrong, { tone: "error" });
           }}

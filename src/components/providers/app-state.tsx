@@ -77,6 +77,8 @@ function readStoredLocation(): CityLocation {
 /* Provider                                                             */
 /* ------------------------------------------------------------------ */
 
+const NO_SAVES: ReadonlySet<string> = new Set();
+
 export function AppStateProvider({ user, children }: { user: ClientUser; children: React.ReactNode }) {
   const { t } = useI18n();
 
@@ -93,11 +95,7 @@ export function AppStateProvider({ user, children }: { user: ClientUser; childre
   const [saved, setSaved] = useState<Set<string>>(new Set());
   const [ready, setReady] = useState(false);
   useEffect(() => {
-    if (!user) {
-      setSaved(new Set());
-      setReady(true);
-      return;
-    }
+    if (!user) return;
     let alive = true;
     fetch("/api/me/saves", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : { ids: [] }))
@@ -148,14 +146,19 @@ export function AppStateProvider({ user, children }: { user: ClientUser; childre
     [saved, user, toast, t],
   );
 
+  // Signed out: nothing is saved and there's nothing to wait for.
+  const ownSaved = user ? saved : NO_SAVES;
+  const savedReady = !user || ready;
   const savedCtx = useMemo<SavedCtx>(
-    () => ({ ready, isSaved: (id) => saved.has(id), toggle, count: saved.size }),
-    [ready, saved, toggle],
+    () => ({ ready: savedReady, isSaved: (id) => ownSaved.has(id), toggle, count: ownSaved.size }),
+    [savedReady, ownSaved, toggle],
   );
 
   // Location
   const [location, setLocation] = useState<CityLocation>({ kind: "none" });
+  // localStorage is only available after hydration.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLocation(readStoredLocation());
   }, []);
   const persist = (v: CityLocation) => {

@@ -21,7 +21,6 @@ export function ExploreControls({
   state,
   chips,
   fixedCategory,
-  basePath,
 }: {
   state: ExploreState;
   chips: Chip[];
@@ -37,7 +36,12 @@ export function ExploreControls({
   const [draft, setDraft] = useState<ExploreState>(state);
   const hoods = useNeighbourhoods();
 
-  useEffect(() => setDraft(state), [state]);
+  // Reset the draft whenever the applied filters change (e.g. back/forward navigation).
+  const [applied, setApplied] = useState(state);
+  if (applied !== state) {
+    setApplied(state);
+    setDraft(state);
+  }
 
   const push = (next: Partial<ExploreState>, opts: { resetPage?: boolean } = { resetPage: true }) => {
     const merged: ExploreState = { ...state, ...next, ...(opts.resetPage ? { page: 1 } : {}) };

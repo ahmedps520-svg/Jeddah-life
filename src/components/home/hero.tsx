@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft, Pause, Play } from "lucide-react";
@@ -16,15 +16,26 @@ export type HeroSlide = {
   image: { url: string; author?: string | null; license?: string | null; sourceUrl?: string | null };
 };
 
+const REDUCE = "(prefers-reduced-motion: reduce)";
+function subscribeReducedMotion(cb: () => void) {
+  const mq = window.matchMedia(REDUCE);
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+}
+function prefersReducedMotion() {
+  return window.matchMedia(REDUCE).matches;
+}
+
 export function Hero({ slides }: { slides: HeroSlide[] }) {
   const { t, locale, dir } = useI18n();
   const [i, setI] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [userPaused, setPaused] = useState<boolean | null>(null);
+  const [hovering, setHovering] = useState(false);
+  const reduceMotion = useSyncExternalStore(subscribeReducedMotion, prefersReducedMotion, () => false);
+  // Respect the OS setting until the visitor chooses otherwise; hovering always pauses.
+  const stopped = userPaused ?? reduceMotion;
+  const paused = stopped || hovering;
 
-  useEffect(() => {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) setPaused(true);
-  }, []);
   useEffect(() => {
     if (paused || slides.length < 2) return;
     const id = setInterval(() => setI((x) => (x + 1) % slides.length), 7000);
@@ -39,8 +50,8 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
       className="relative isolate overflow-hidden bg-ink-900 text-sand-50"
       aria-roledescription="carousel"
       aria-label={t.brand.tagline}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => setHovering(true)}
+      onMouseLeave={() => setHovering(false)}
     >
       <div className="relative h-[68vh] min-h-[440px] max-h-[720px]">
         {slides.length > 0 ? (
@@ -93,11 +104,11 @@ export function Hero({ slides }: { slides: HeroSlide[] }) {
             <div className="mt-8 flex items-center gap-3">
               <button
                 type="button"
-                onClick={() => setPaused((p) => !p)}
+                onClick={() => setPaused(!stopped)}
                 className="grid size-8 place-items-center rounded-full ring-1 ring-white/30 hover:bg-white/10"
-                aria-label={paused ? "Play" : "Pause"}
+                aria-label={stopped ? t.home.play : t.home.pause}
               >
-                {paused ? <Play className="size-3.5" /> : <Pause className="size-3.5" />}
+                {stopped ? <Play className="size-3.5" /> : <Pause className="size-3.5" />}
               </button>
               <div className="flex gap-1.5" role="tablist">
                 {slides.map((s, idx) => (

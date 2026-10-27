@@ -19,6 +19,7 @@ export function LanguageSwitch({ tone = "dark" }: { tone?: "dark" | "light" }) {
         e.preventDefault();
         document.cookie = `${LOCALE_COOKIE}=${other}; path=/; max-age=31536000; samesite=lax`;
         // Full navigation so the document direction, fonts and dictionary all switch together.
+        // eslint-disable-next-line @next/next/no-location-assign-relative-destination
         window.location.assign(target + window.location.search + window.location.hash);
       }}
       aria-label={t.nav.languageLabel}

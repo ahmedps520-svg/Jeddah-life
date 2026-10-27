@@ -18,20 +18,21 @@ type Hit = PlaceLite & { distanceKm: number };
 export function NearYou({ hoods }: { hoods: HoodNames }) {
   const { t, locale } = useI18n();
   const { location, origin } = useCityLocation();
-  const [hits, setHits] = useState<Hit[] | null>(null);
+  const key = origin ? `${origin.lat.toFixed(4)},${origin.lng.toFixed(4)}` : null;
+  const [result, setResult] = useState<{ key: string; hits: Hit[] } | null>(null);
+  // Only show results for the location currently chosen.
+  const hits = key && result?.key === key ? result.hits : null;
 
   useEffect(() => {
-    if (!origin) {
-      setHits(null);
-      return;
-    }
+    if (!key) return;
+    const [lat, lng] = key.split(",");
     const ctrl = new AbortController();
-    fetch(`/api/places/near?lat=${origin.lat.toFixed(4)}&lng=${origin.lng.toFixed(4)}&limit=12`, { signal: ctrl.signal })
+    fetch(`/api/places/near?lat=${lat}&lng=${lng}&limit=12`, { signal: ctrl.signal })
       .then((r) => r.json())
-      .then((d: { hits: Hit[] }) => setHits(d.hits))
+      .then((d: { hits: Hit[] }) => setResult({ key, hits: d.hits }))
       .catch(() => {});
     return () => ctrl.abort();
-  }, [origin]);
+  }, [key]);
 
   if (!origin) {
     return (

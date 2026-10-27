@@ -57,11 +57,14 @@ export function ItineraryView({
   const [shareToken, setShareToken] = useState(initialShare ?? null);
   const [dirty, setDirty] = useState(false);
 
-  useEffect(() => {
+  // A new plan from the parent (e.g. "generate again") replaces local edits.
+  const [source, setSource] = useState({ initialPlan, initialPlaces, initialSettings });
+  if (source.initialPlan !== initialPlan || source.initialPlaces !== initialPlaces || source.initialSettings !== initialSettings) {
+    setSource({ initialPlan, initialPlaces, initialSettings });
     setPlan(initialPlan);
     setPlaces(initialPlaces);
     setSettings(initialSettings);
-  }, [initialPlan, initialPlaces, initialSettings]);
+  }
 
   const stopsInput = (p: Plan = plan): StopInput[] => p.stops.map((s) => ({ placeId: s.placeId, kind: s.kind, durationMin: s.durationMin }));
 
@@ -306,7 +309,11 @@ export function ItineraryView({
           </p>
           {totals.budgetPerPerson != null && (
             <p className={`rounded-xl px-3 py-2 text-sm font-medium ${totals.overPerPerson > 0 ? "bg-coral-500/20 text-coral-400" : "bg-sea-500/20 text-sea-200"}`}>
-              {totals.overPerPerson > 0 ? t.planner.overBudget.replace("{amount}", formatSar(locale, totals.overPerPerson)) : t.planner.withinBudget}
+              {totals.overPerPerson > 0
+                ? t.planner.overBudget.replace("{amount}", formatSar(locale, totals.overPerPerson))
+                : totals.unknownStops > 0
+                  ? t.planner.withinBudgetKnown
+                  : t.planner.withinBudget}
             </p>
           )}
           {totals.overPerPerson > 0 && (
@@ -486,11 +493,9 @@ export function AddStopSheet({ open, onClose, onPick, title }: { open: boolean; 
   const { t, locale } = useI18n();
   const [q, setQ] = useState("");
   const [hits, setHits] = useState<PlaceLite[]>([]);
+  const shownHits = q.trim().length >= 2 ? hits : [];
   useEffect(() => {
-    if (q.trim().length < 2) {
-      setHits([]);
-      return;
-    }
+    if (q.trim().length < 2) return;
     const ctrl = new AbortController();
     const id = setTimeout(() => {
       fetch(`/api/places/search?q=${encodeURIComponent(q)}&limit=12`, { signal: ctrl.signal })
@@ -510,7 +515,7 @@ export function AddStopSheet({ open, onClose, onPick, title }: { open: boolean; 
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t.planner.addStopSearch} className="flex-1 bg-transparent outline-none" autoFocus />
       </label>
       <ul className="space-y-1">
-        {hits.map((p) => (
+        {shownHits.map((p) => (
           <li key={p.id}>
             <button type="button" onClick={() => onPick(p)} className="flex w-full items-center gap-3 rounded-2xl p-2 text-start hover:bg-sand-100">
               <PlaceCover p={p} sizes="56px" className="size-14 shrink-0 rounded-xl" />

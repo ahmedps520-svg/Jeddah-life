@@ -56,7 +56,10 @@ export function PlannerWizard({
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);
 
+  // Browser-only inputs, read once after hydration: the current time and a
+  // plan handed over in sessionStorage.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setS((x) => ({ ...x, startTime: nextHour() }));
     // A plan handed over from Make It Happen or an event page.
     try {
@@ -72,9 +75,12 @@ export function PlannerWizard({
     }
   }, []);
 
-  useEffect(() => {
+  // Default to starting from the device location once it becomes available.
+  const [seenKind, setSeenKind] = useState(location.kind);
+  if (seenKind !== location.kind) {
+    setSeenKind(location.kind);
     if (location.kind === "device" && startChoice === "anywhere") setStartChoice("device");
-  }, [location.kind, startChoice]);
+  }
 
   async function generate(settings: PlanSettings = s, seed?: number) {
     setLoading(true);

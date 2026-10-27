@@ -21,7 +21,6 @@ import { FLAG, type MapPlace } from "@/lib/map/compact";
 import { PLACE_CATEGORIES, categoryDef, subcategoryLabel } from "@/lib/taxonomy";
 import { haversineKm } from "@/lib/places/estimates";
 import { formatDistance, formatNumber, formatSarRange, plural } from "@/lib/i18n/format";
-import { normalizeText } from "@/lib/search/normalize";
 import type { Attr } from "@/lib/search/parse";
 import type { GeoPolygon } from "@/lib/db/schema";
 
@@ -73,7 +72,10 @@ export function MapExplorer({ initial }: { initial: MapFilters }) {
   const [filters, setFilters] = useState<MapFilters>(initial);
   const [draft, setDraft] = useState<MapFilters>(initial);
   const [query, setQuery] = useState(initial.q);
-  const [smart, setSmart] = useState<{ ids: string[]; chips: { key: string; label: string }[]; mode: string } | null>(null);
+  const [smartResult, setSmartResult] = useState<{ q: string; data: { ids: string[]; chips: { key: string; label: string }[]; mode: string } } | null>(null);
+  const smartQ = filters.q.trim();
+  // Server ranking only applies to the query it was computed for.
+  const smart = smartQ && smartResult?.q === smartQ ? smartResult.data : null;
   const [selected, setSelected] = useState<string | null>(null);
   const [view, setView] = useState<"map" | "list">("map");
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -96,18 +98,14 @@ export function MapExplorer({ initial }: { initial: MapFilters }) {
 
   // Natural-language query -> server-ranked ids.
   useEffect(() => {
-    const q = filters.q.trim();
-    if (!q) {
-      setSmart(null);
-      return;
-    }
+    if (!smartQ) return;
     const ctrl = new AbortController();
-    fetch(`/api/search/ids?q=${encodeURIComponent(q)}&locale=${locale}`, { signal: ctrl.signal })
+    fetch(`/api/search/ids?q=${encodeURIComponent(smartQ)}&locale=${locale}`, { signal: ctrl.signal })
       .then((r) => r.json())
-      .then((d) => setSmart(d))
+      .then((data) => setSmartResult({ q: smartQ, data }))
       .catch(() => {});
     return () => ctrl.abort();
-  }, [filters.q, locale]);
+  }, [smartQ, locale]);
 
   // Keep the URL shareable.
   useEffect(() => {
